@@ -867,15 +867,6 @@ namespace WebApiMovil.Models
         // Unable to generate entity type for table 'dbo.TEMP_NEGOCIOS_BANAMEX'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.TEMP_REPORTE_INVENTARIOS_BANAMEX_TNM_FECHA'. Please see the warning messages.
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=192.168.100.56;Persist Security Info=True;Database=ELAVON-TEST;User Id=sa;Password=b4ckl45h;");
-            }
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
@@ -27564,6 +27555,7 @@ namespace WebApiMovil.Models
                     .HasMaxLength(255)
                     .IsUnicode(false);
             });
+            modelBuilder.Query<SpGetPassword>();
         }
     }
 }

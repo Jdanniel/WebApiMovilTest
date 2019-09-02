@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using WebApiMovil.Models;
 
 namespace WebApiMovil
 {
@@ -27,7 +28,7 @@ namespace WebApiMovil
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            //services.AddDbContext<DatabaseMicContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ElavonTest")));
+            services.AddDbContext<ELAVONTESTContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ElavonTest")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
