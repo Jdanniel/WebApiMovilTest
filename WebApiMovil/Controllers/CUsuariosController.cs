@@ -42,46 +42,40 @@ namespace WebApiMovil.Controllers
         }
 
         [HttpPost("LoginRequest")]
-        public async Task<ActionResult<LoginResponse>> GetLoginRequest(LoginRequest req)
+        public async Task<ActionResult> GetLoginRequest(LoginRequest req)
         {
             if (req == null) return BadRequest("No se ingresaron los datos solicitados");
 
             try
             {
-                if (!UsernameExists(req.username))
-                {
-                    return NotFound();
-                }
-                LoginResponse login = new LoginResponse();
 
                 int idusuario = await _context.CUsuarios.Where(x => x.Username == req.username).Select(x => x.IdUsuario).SingleOrDefaultAsync();
                 var usuario = await _context.CUsuarios.Where(x => x.IdUsuario == idusuario).SingleOrDefaultAsync();
-                SpGetPassword pw = await _context.Query<SpGetPassword>().FromSql("EXEC SP_GET_PASSWORD @p0", idusuario).SingleOrDefaultAsync();
 
-                if (!req.password.Equals(pw))
+                if (usuario == null)
                 {
-                    login.respuesta = false;
-                    login.mensaje = "Credenciales Incorrectas";
-                    return BadRequest(login);
+                    return NotFound();
                 }
 
-                login.respuesta = true;
-                login.mensaje = "Credenciales correctas";
-                login.nombre = usuario.Nombre;
-                login.paterno = usuario.Paterno;
-                login.materno = usuario.Materno;
-                login.username = usuario.Username;
-                login.password = pw.pw;
+                SpGetPassword pw = await _context.Query<SpGetPassword>().FromSql("EXEC SP_GET_PASSWORD @p0", idusuario).SingleOrDefaultAsync();
 
-                return Ok(login);
+                if (usuario.IsPda != 1)
+                {
+                    return NotFound(new { Texterror = "El usuario no es PDA" });
+                }
+
+                if (!req.password.Equals(pw.pw))
+                {
+                    return NotFound();
+                }
+
+
+                return Ok(new { user = usuario.Nombre +" "+ usuario.Paterno +" "+ usuario.Materno, idusuario = usuario.IdUsuario });
 
             }
             catch (Exception ex)
             {
-                LoginResponse login = new LoginResponse();
-                login.respuesta = false;
-                login.mensaje = ex.ToString();
-                return BadRequest(login);
+                return BadRequest(ex.StackTrace);
             }
 
         }
