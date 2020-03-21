@@ -175,5 +175,6 @@ namespace WebApiMovil.Models
         public int? Rp { get; set; }
         public int? Rs { get; set; }
         public int? IdArOriginal { get; set; }
+        public string MiComercio { get; set; }
     }
 }

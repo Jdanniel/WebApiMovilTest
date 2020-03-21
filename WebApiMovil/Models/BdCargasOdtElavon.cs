@@ -46,5 +46,6 @@ namespace WebApiMovil.Models
         public string Estatus { get; set; }
         public string Mensaje { get; set; }
         public int? IdUsuario { get; set; }
+        public string SegmentoElavon { get; set; }
     }
 }

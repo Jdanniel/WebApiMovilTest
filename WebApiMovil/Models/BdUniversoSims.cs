@@ -15,5 +15,7 @@ namespace WebApiMovil.Models
         public string Observaciones { get; set; }
         public int? IdUsuario { get; set; }
         public DateTime? FechaCarga { get; set; }
+        public string IdProceso { get; set; }
+        public string StatusCarga { get; set; }
     }
 }

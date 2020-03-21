@@ -52,6 +52,36 @@ namespace WebApiMovil.Controllers
                 int idusuario = await _context.CUsuarios.Where(x => x.Username == req.username).Select(x => x.IdUsuario).SingleOrDefaultAsync();
                 var usuario = await _context.CUsuarios.Where(x => x.IdUsuario == idusuario).SingleOrDefaultAsync();
 
+                var UsuarioPhone = _context.BdUsuarioCelular.Where(x => x.IdUsuario == idusuario).FirstOrDefault();
+
+                if(UsuarioPhone != null)
+                {
+                    if (UsuarioPhone.Imei != req.imei)
+                    {
+                        if(UsuarioPhone.Imei == null)
+                        {
+                            UsuarioPhone.Imei = req.imei;
+                            _context.SaveChanges();
+                        }
+                        else
+                        {
+                            return NotFound();
+                        }
+                    }
+                }
+                else
+                {
+                    BdUsuarioCelular celular = new BdUsuarioCelular()
+                    {
+                        IdUsuario = idusuario,
+                        IdUsuarioAlta = 559,
+                        FecAlta = DateTime.Now,
+                        Imei = req.imei
+                    };
+                    _context.BdUsuarioCelular.Add(celular);
+                    _context.SaveChanges();
+                }
+
                 if (usuario == null)
                 {
                     return NotFound();

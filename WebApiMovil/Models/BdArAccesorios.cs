@@ -12,5 +12,6 @@ namespace WebApiMovil.Models
         public string Base { get; set; }
         public string Tapa { get; set; }
         public string CableAc { get; set; }
+        public string Movimiento { get; set; }
     }
 }

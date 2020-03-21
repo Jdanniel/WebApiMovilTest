@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace WebApiMovil.Models
 {
-    public partial class BdCargaCierresMasivosTexto
+    public partial class BdCargaCierresMasivosTextoMit
     {
         public int IdCierreMasivo { get; set; }
         public string IdProceso { get; set; }
@@ -60,11 +60,11 @@ namespace WebApiMovil.Models
         public string TapaRetiro { get; set; }
         public string CableAcRetiro { get; set; }
         public string BaseRetiro { get; set; }
+        public string MensajeError { get; set; }
         public string SiReqPromo { get; set; }
         public string SeBajoApp { get; set; }
         public string ComercioNotificado { get; set; }
         public string Telefono1 { get; set; }
         public string Telefono2 { get; set; }
-        public string MensajeError { get; set; }
     }
 }

@@ -32,8 +32,11 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdArFecGarantia> BdArFecGarantia { get; set; }
         public virtual DbSet<BdArInsumo> BdArInsumo { get; set; }
         public virtual DbSet<BdArLogWs> BdArLogWs { get; set; }
+        public virtual DbSet<BdArMiComercio> BdArMiComercio { get; set; }
         public virtual DbSet<BdArPaso> BdArPaso { get; set; }
         public virtual DbSet<BdArPrefacturacion> BdArPrefacturacion { get; set; }
+        public virtual DbSet<BdArSegmento> BdArSegmento { get; set; }
+        public virtual DbSet<BdArSegmentoFail> BdArSegmentoFail { get; set; }
         public virtual DbSet<BdArSparePart> BdArSparePart { get; set; }
         public virtual DbSet<BdArTerminalAsociadaAmex> BdArTerminalAsociadaAmex { get; set; }
         public virtual DbSet<BdArViatico> BdArViatico { get; set; }
@@ -44,6 +47,7 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdArchivosDispersion> BdArchivosDispersion { get; set; }
         public virtual DbSet<BdArchivosPrefacturacion> BdArchivosPrefacturacion { get; set; }
         public virtual DbSet<BdAsignacionAutomaticaPaso> BdAsignacionAutomaticaPaso { get; set; }
+        public virtual DbSet<BdAsignacionTecnicoArLog> BdAsignacionTecnicoArLog { get; set; }
         public virtual DbSet<BdAttach> BdAttach { get; set; }
         public virtual DbSet<BdAttachAcciones> BdAttachAcciones { get; set; }
         public virtual DbSet<BdAttachDhl> BdAttachDhl { get; set; }
@@ -60,7 +64,9 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdBitacoraAplicativoUnidad> BdBitacoraAplicativoUnidad { get; set; }
         public virtual DbSet<BdBitacoraAr> BdBitacoraAr { get; set; }
         public virtual DbSet<BdBitacoraArAlta> BdBitacoraArAlta { get; set; }
+        public virtual DbSet<BdBitacoraBdNegocios> BdBitacoraBdNegocios { get; set; }
         public virtual DbSet<BdBitacoraBorrarUnidad> BdBitacoraBorrarUnidad { get; set; }
+        public virtual DbSet<BdBitacoraCambioFecGarantia> BdBitacoraCambioFecGarantia { get; set; }
         public virtual DbSet<BdBitacoraCambioMensajeria> BdBitacoraCambioMensajeria { get; set; }
         public virtual DbSet<BdBitacoraCambioNoInventario> BdBitacoraCambioNoInventario { get; set; }
         public virtual DbSet<BdBitacoraCambioSerie> BdBitacoraCambioSerie { get; set; }
@@ -71,6 +77,7 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdBitacoraCompromisos> BdBitacoraCompromisos { get; set; }
         public virtual DbSet<BdBitacoraConectividadUnidad> BdBitacoraConectividadUnidad { get; set; }
         public virtual DbSet<BdBitacoraDiagnostico> BdBitacoraDiagnostico { get; set; }
+        public virtual DbSet<BdBitacoraDiasFestivos> BdBitacoraDiasFestivos { get; set; }
         public virtual DbSet<BdBitacoraDoctosPrefacturacion> BdBitacoraDoctosPrefacturacion { get; set; }
         public virtual DbSet<BdBitacoraEnvio> BdBitacoraEnvio { get; set; }
         public virtual DbSet<BdBitacoraIgualas> BdBitacoraIgualas { get; set; }
@@ -81,6 +88,7 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdBitacoraModeloUnidad> BdBitacoraModeloUnidad { get; set; }
         public virtual DbSet<BdBitacoraMovimientosInvServicioFalla> BdBitacoraMovimientosInvServicioFalla { get; set; }
         public virtual DbSet<BdBitacoraMovimientosRetornosInsumos> BdBitacoraMovimientosRetornosInsumos { get; set; }
+        public virtual DbSet<BdBitacoraNegociosCoordenadas> BdBitacoraNegociosCoordenadas { get; set; }
         public virtual DbSet<BdBitacoraNoInsumoAr> BdBitacoraNoInsumoAr { get; set; }
         public virtual DbSet<BdBitacoraOdtOnbaseConfirmacion> BdBitacoraOdtOnbaseConfirmacion { get; set; }
         public virtual DbSet<BdBitacoraProcedure> BdBitacoraProcedure { get; set; }
@@ -129,10 +137,12 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdCallcenterRQ9> BdCallcenterRQ9 { get; set; }
         public virtual DbSet<BdCambioStatusAr> BdCambioStatusAr { get; set; }
         public virtual DbSet<BdCambiosEstatusPermititdosUnidades> BdCambiosEstatusPermititdosUnidades { get; set; }
+        public virtual DbSet<BdCargaChangeComentarios> BdCargaChangeComentarios { get; set; }
         public virtual DbSet<BdCargaChangeStatus> BdCargaChangeStatus { get; set; }
-        public virtual DbSet<BdCargaCierreMasivoMinv> BdCargaCierreMasivoMinv { get; set; }
         public virtual DbSet<BdCargaCierresMasivos> BdCargaCierresMasivos { get; set; }
         public virtual DbSet<BdCargaCierresMasivosTexto> BdCargaCierresMasivosTexto { get; set; }
+        public virtual DbSet<BdCargaCierresMasivosTextoMit> BdCargaCierresMasivosTextoMit { get; set; }
+        public virtual DbSet<BdCargaCodigoRechazo> BdCargaCodigoRechazo { get; set; }
         public virtual DbSet<BdCargaEnviosDhlErrores> BdCargaEnviosDhlErrores { get; set; }
         public virtual DbSet<BdCargaEnviosDhlPaso> BdCargaEnviosDhlPaso { get; set; }
         public virtual DbSet<BdCargaEnviosEstafetaPaso> BdCargaEnviosEstafetaPaso { get; set; }
@@ -144,6 +154,8 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdCargasOdtElavon> BdCargasOdtElavon { get; set; }
         public virtual DbSet<BdCargasRecalcularFechas> BdCargasRecalcularFechas { get; set; }
         public virtual DbSet<BdChancgeLog> BdChancgeLog { get; set; }
+        public virtual DbSet<BdChangeLog> BdChangeLog { get; set; }
+        public virtual DbSet<BdChangeLog1> BdChangeLog1 { get; set; }
         public virtual DbSet<BdChangeMassiveStatus> BdChangeMassiveStatus { get; set; }
         public virtual DbSet<BdChangeStatusArPaso> BdChangeStatusArPaso { get; set; }
         public virtual DbSet<BdClaveEstado> BdClaveEstado { get; set; }
@@ -180,6 +192,7 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdCuentasBancarias> BdCuentasBancarias { get; set; }
         public virtual DbSet<BdCursos> BdCursos { get; set; }
         public virtual DbSet<BdCursosAsignados> BdCursosAsignados { get; set; }
+        public virtual DbSet<BdDatosCierresAplicacion> BdDatosCierresAplicacion { get; set; }
         public virtual DbSet<BdDbBackup> BdDbBackup { get; set; }
         public virtual DbSet<BdDevoluciones> BdDevoluciones { get; set; }
         public virtual DbSet<BdDirecciones> BdDirecciones { get; set; }
@@ -201,6 +214,7 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdEquivalenciaEstados> BdEquivalenciaEstados { get; set; }
         public virtual DbSet<BdEspecificacionCausaRechazo> BdEspecificacionCausaRechazo { get; set; }
         public virtual DbSet<BdEspecificacionTipoFalla> BdEspecificacionTipoFalla { get; set; }
+        public virtual DbSet<BdEstadosProveedores> BdEstadosProveedores { get; set; }
         public virtual DbSet<BdEtiquetaInformacionUnidadCliente> BdEtiquetaInformacionUnidadCliente { get; set; }
         public virtual DbSet<BdExistenciasConsumiblesTecnicos> BdExistenciasConsumiblesTecnicos { get; set; }
         public virtual DbSet<BdExitoLayoutLog> BdExitoLayoutLog { get; set; }
@@ -237,6 +251,7 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdLogroBlog> BdLogroBlog { get; set; }
         public virtual DbSet<BdLogros> BdLogros { get; set; }
         public virtual DbSet<BdLogrosResponsables> BdLogrosResponsables { get; set; }
+        public virtual DbSet<BdMailRechazoErrores> BdMailRechazoErrores { get; set; }
         public virtual DbSet<BdMcSims> BdMcSims { get; set; }
         public virtual DbSet<BdMcViaGeozonaCoordenadas> BdMcViaGeozonaCoordenadas { get; set; }
         public virtual DbSet<BdMcViaGeozonaCoordenadasZona> BdMcViaGeozonaCoordenadasZona { get; set; }
@@ -262,8 +277,10 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdNegociosAlta> BdNegociosAlta { get; set; }
         public virtual DbSet<BdNegociosPaso2> BdNegociosPaso2 { get; set; }
         public virtual DbSet<BdNegociosServiciosDobles> BdNegociosServiciosDobles { get; set; }
+        public virtual DbSet<BdOdtsApiWebservice> BdOdtsApiWebservice { get; set; }
         public virtual DbSet<BdOnbaseInbox> BdOnbaseInbox { get; set; }
         public virtual DbSet<BdOnbaseInboxConfirmacion> BdOnbaseInboxConfirmacion { get; set; }
+        public virtual DbSet<BdOpcionesReingenieriaTipoUsuario> BdOpcionesReingenieriaTipoUsuario { get; set; }
         public virtual DbSet<BdOrdenCompra> BdOrdenCompra { get; set; }
         public virtual DbSet<BdOrdenCompraInsumos> BdOrdenCompraInsumos { get; set; }
         public virtual DbSet<BdOrdenCompraNoFactura> BdOrdenCompraNoFactura { get; set; }
@@ -280,8 +297,10 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdPresupuestos> BdPresupuestos { get; set; }
         public virtual DbSet<BdPresupuestosEjercido> BdPresupuestosEjercido { get; set; }
         public virtual DbSet<BdPresupuestosRegional> BdPresupuestosRegional { get; set; }
+        public virtual DbSet<BdProactivas> BdProactivas { get; set; }
         public virtual DbSet<BdProductoStatusAr> BdProductoStatusAr { get; set; }
         public virtual DbSet<BdPruebasUnitarias> BdPruebasUnitarias { get; set; }
+        public virtual DbSet<BdReCalculoDeFechasEstatus> BdReCalculoDeFechasEstatus { get; set; }
         public virtual DbSet<BdRecepcionElavon> BdRecepcionElavon { get; set; }
         public virtual DbSet<BdRecepcionInsumos> BdRecepcionInsumos { get; set; }
         public virtual DbSet<BdRecoverPassword> BdRecoverPassword { get; set; }
@@ -333,12 +352,14 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdStatusTipoUsuario> BdStatusTipoUsuario { get; set; }
         public virtual DbSet<BdSustituciones> BdSustituciones { get; set; }
         public virtual DbSet<BdTempActualizaTipoPlazaCliente> BdTempActualizaTipoPlazaCliente { get; set; }
+        public virtual DbSet<BdTempCambioSlaOdt> BdTempCambioSlaOdt { get; set; }
         public virtual DbSet<BdTempCorreccion> BdTempCorreccion { get; set; }
         public virtual DbSet<BdTempServicioCierrePda> BdTempServicioCierrePda { get; set; }
         public virtual DbSet<BdTerminales> BdTerminales { get; set; }
         public virtual DbSet<BdTipoPlan> BdTipoPlan { get; set; }
         public virtual DbSet<BdTipoPlazaClienteCp> BdTipoPlazaClienteCp { get; set; }
         public virtual DbSet<BdTipoServicioProducto> BdTipoServicioProducto { get; set; }
+        public virtual DbSet<BdTipoUsuariosMenus> BdTipoUsuariosMenus { get; set; }
         public virtual DbSet<BdTpvsAlta> BdTpvsAlta { get; set; }
         public virtual DbSet<BdTransacciones> BdTransacciones { get; set; }
         public virtual DbSet<BdTransaccionesPaso> BdTransaccionesPaso { get; set; }
@@ -368,6 +389,9 @@ namespace WebApiMovil.Models
         public virtual DbSet<BdUsuarioTecnico> BdUsuarioTecnico { get; set; }
         public virtual DbSet<BdUsuarioVistaEscalamiento> BdUsuarioVistaEscalamiento { get; set; }
         public virtual DbSet<BdUsuarioZona> BdUsuarioZona { get; set; }
+        public virtual DbSet<BdUsuariosEnviarEmail> BdUsuariosEnviarEmail { get; set; }
+        public virtual DbSet<BdUsuariosEnviarEmail2> BdUsuariosEnviarEmail2 { get; set; }
+        public virtual DbSet<BdUsuariosEnviorEmail2> BdUsuariosEnviorEmail2 { get; set; }
         public virtual DbSet<BdVacaciones> BdVacaciones { get; set; }
         public virtual DbSet<BdValMovimientosInvServicioFalla> BdValMovimientosInvServicioFalla { get; set; }
         public virtual DbSet<BdVistaEscalamientoStatusAr> BdVistaEscalamientoStatusAr { get; set; }
@@ -385,6 +409,7 @@ namespace WebApiMovil.Models
         public virtual DbSet<CBbvaMicroformasServicios> CBbvaMicroformasServicios { get; set; }
         public virtual DbSet<CBitacoraAgendadosComentarios> CBitacoraAgendadosComentarios { get; set; }
         public virtual DbSet<CCalifJunta> CCalifJunta { get; set; }
+        public virtual DbSet<CCanales> CCanales { get; set; }
         public virtual DbSet<CCarrier> CCarrier { get; set; }
         public virtual DbSet<CCategoria> CCategoria { get; set; }
         public virtual DbSet<CCategoriaValidaDispositivos> CCategoriaValidaDispositivos { get; set; }
@@ -450,6 +475,7 @@ namespace WebApiMovil.Models
         public virtual DbSet<CNivelReparacion> CNivelReparacion { get; set; }
         public virtual DbSet<CNombreCurso> CNombreCurso { get; set; }
         public virtual DbSet<CNombreJunta> CNombreJunta { get; set; }
+        public virtual DbSet<CNotificacionesEmail> CNotificacionesEmail { get; set; }
         public virtual DbSet<COperadores> COperadores { get; set; }
         public virtual DbSet<CPlazas> CPlazas { get; set; }
         public virtual DbSet<CPrioridades> CPrioridades { get; set; }
@@ -470,6 +496,7 @@ namespace WebApiMovil.Models
         public virtual DbSet<CResponsablesAgendados> CResponsablesAgendados { get; set; }
         public virtual DbSet<CSedeCurso> CSedeCurso { get; set; }
         public virtual DbSet<CSegmentos> CSegmentos { get; set; }
+        public virtual DbSet<CSegmentosElavon> CSegmentosElavon { get; set; }
         public virtual DbSet<CServicioMensajeria> CServicioMensajeria { get; set; }
         public virtual DbSet<CServicios> CServicios { get; set; }
         public virtual DbSet<CServiciosBancomer> CServiciosBancomer { get; set; }
@@ -500,6 +527,7 @@ namespace WebApiMovil.Models
         public virtual DbSet<CStatusUsuario> CStatusUsuario { get; set; }
         public virtual DbSet<CStatusValidacionPrefacturacion> CStatusValidacionPrefacturacion { get; set; }
         public virtual DbSet<CSubAlmacenes> CSubAlmacenes { get; set; }
+        public virtual DbSet<CSubrechazo> CSubrechazo { get; set; }
         public virtual DbSet<CTecnicos> CTecnicos { get; set; }
         public virtual DbSet<CTiempoMedicion> CTiempoMedicion { get; set; }
         public virtual DbSet<CTiempoReferencia> CTiempoReferencia { get; set; }
@@ -677,6 +705,7 @@ namespace WebApiMovil.Models
         // Unable to generate entity type for table 'dbo.BD_AR_SLA_INVENTARIOS'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.PRODUCTOS'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.NOMINA'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.BD_OPCIONES_REINGENIERIA'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_ERRORES_MASIVOS'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.FILL_RATE'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_UNIDADES_POR_RECIBIR_ALMACEN2'. Please see the warning messages.
@@ -701,6 +730,7 @@ namespace WebApiMovil.Models
         // Unable to generate entity type for table 'dbo.GASOLINA_AVION'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_QUESTS_CALLCENTER'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_cARGAS_ARCHIVO'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.BD_CARGAS_MOV_RENGENIERIA'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_ARCHIVO1'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.ENVIOS_REGION'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.C_RESPONSABLE_CANCELACION_PROGRAMADO'. Please see the warning messages.
@@ -796,11 +826,13 @@ namespace WebApiMovil.Models
         // Unable to generate entity type for table 'dbo.BD_INFO_ERRORES_CARGA_MASIVA'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.CambioMasivoBdUnidades'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_BITACORA_ERROR'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.prueba_01'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.SI_DASHBOARD'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.C_CONECTIVIDAD_SANTANDER_REPORTE'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_LOGS_CARGA_MASIVA_TABLA_ERRORES'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.CambioMasivoBdUnidades2'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_AR_PRODUCTOS'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.BD_TESTIGO'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.C_HORARIOS_PERSONAL'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.TEMP_F11_4'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_LOG_CARGA_MASIVA_TABLA_TOTAL_PROCESADOS'. Please see the warning messages.
@@ -843,9 +875,11 @@ namespace WebApiMovil.Models
         // Unable to generate entity type for table 'dbo.C_WINCOR_MODULO'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.C_WINCOR_SUBMODULO'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.tabla_prueba_consolidado'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.MUESTRA_1'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.C_WINCOR_TIPO_MEDIDA'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.TEMPORAL_REPORTE_RETIROS'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.UNIDADES_DISPONIBLES'. Please see the warning messages.
+        // Unable to generate entity type for table 'dbo.prueba_respaldo'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.RESPALDO_TABLA'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.TEMPORAL_2'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.UNIDADES_TRANSITO'. Please see the warning messages.
@@ -857,7 +891,6 @@ namespace WebApiMovil.Models
         // Unable to generate entity type for table 'dbo.BD_SOLICITUDES_VIATICOS_CONCEPTOS_TEMP'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_BITACORA_STATUS_USUARIO'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_BITACORA_SURTIDO_MENSAJERIA'. Please see the warning messages.
-        // Unable to generate entity type for table 'dbo.C_SUBRECHAZO'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_MODELOS_HOMOLOGADOS_SANTANDER'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.C_BANCOS'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.BD_MODELOS_MODIFICADOS'. Please see the warning messages.
@@ -866,6 +899,15 @@ namespace WebApiMovil.Models
         // Unable to generate entity type for table 'dbo.BD_BITACORA_CAMBIO_MASIVO_DANIADA'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.TEMP_NEGOCIOS_BANAMEX'. Please see the warning messages.
         // Unable to generate entity type for table 'dbo.TEMP_REPORTE_INVENTARIOS_BANAMEX_TNM_FECHA'. Please see the warning messages.
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Server=192.168.100.56;Persist Security Info=True;connect timeout=400000;Database=ELAVON-TEST;User Id=sa;Password=b4ckl45h;");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -1153,6 +1195,9 @@ namespace WebApiMovil.Models
                 entity.HasIndex(e => new { e.NoAr, e.Status, e.IdProveedor, e.IdStatusAr })
                     .HasName("missing_index_1145_1144");
 
+                entity.HasIndex(e => new { e.FecGarantia, e.IdStatusAr, e.IdAr, e.FecInicio, e.HorasGarantia, e.FecAlta, e.FecAtencion, e.IdProyecto })
+                    .HasName("missing_index_4130_4129");
+
                 entity.HasIndex(e => new { e.IdAr, e.FecInicio, e.HorasGarantia, e.FecAlta, e.FecAtencion, e.FecGarantia, e.IdStatusAr, e.IdProyecto })
                     .HasName("missing_index_4135_4134");
 
@@ -1165,28 +1210,28 @@ namespace WebApiMovil.Models
                 entity.HasIndex(e => new { e.IdAr, e.DescNegocio, e.Poblacion, e.Estado, e.Cp, e.IdSegmento, e.IdServicio, e.IdCliente, e.NoAr, e.NoAfiliacion, e.IdFalla, e.HorasGarantia, e.IdTecnico, e.IdCarga, e.Status })
                     .HasName("missing_index_192_191");
 
-                entity.HasIndex(e => new { e.Estado, e.IdProyecto, e.Telefono, e.DescNegocio, e.Direccion, e.Colonia, e.Poblacion, e.NoAr, e.NoAfiliacion, e.Cp, e.Segmento, e.TipoServicio, e.TipoFalla, e.IdAr, e.IdCliente, e.IdCarga, e.Status })
+                entity.HasIndex(e => new { e.IdAr, e.IdCliente, e.IdProyecto, e.Telefono, e.DescNegocio, e.Direccion, e.Colonia, e.Poblacion, e.NoAr, e.NoAfiliacion, e.Cp, e.Segmento, e.TipoServicio, e.TipoFalla, e.Estado, e.IdCarga, e.Status })
                     .HasName("missing_index_157_156");
 
                 entity.HasIndex(e => new { e.Cp, e.Segmento, e.PrecioExito, e.IdEstado, e.IdRegion, e.IdZona, e.IdFalla, e.HorasGarantia, e.IdAr, e.IdCliente, e.NoAr, e.NoAfiliacion, e.IdTecnico, e.IdProyecto, e.TipoServicio, e.TipoFalla, e.IdSegmento, e.IdServicio, e.IdCarga, e.Status })
                     .HasName("missing_index_198_197");
 
-                entity.HasIndex(e => new { e.IdAr, e.IdCarga, e.IdRegion, e.IdZona, e.NoAr, e.Concepto, e.DescCorta, e.Sintoma, e.IsExito, e.IdProducto, e.DescNegocio, e.FecInicio, e.IdServicio, e.IdFalla, e.IdCliente, e.ClaveRechazo, e.IdTecnico, e.FecGarantia, e.FecCierre, e.DescripcionTrabajo, e.Bitacora, e.NoAfiliacion, e.IdStatusAr, e.Status, e.IdProveedor })
+                entity.HasIndex(e => new { e.IdAr, e.IdCarga, e.Bitacora, e.NoAfiliacion, e.IdRegion, e.IdZona, e.NoAr, e.Concepto, e.DescCorta, e.Sintoma, e.IsExito, e.IdProducto, e.DescNegocio, e.FecInicio, e.IdServicio, e.IdFalla, e.IdCliente, e.ClaveRechazo, e.IdTecnico, e.FecGarantia, e.FecCierre, e.DescripcionTrabajo, e.IdStatusAr, e.Status, e.IdProveedor })
                     .HasName("missing_index_4101_4100");
 
-                entity.HasIndex(e => new { e.NoAr, e.Concepto, e.DescCorta, e.Sintoma, e.Bitacora, e.NoAfiliacion, e.DescNegocio, e.FecInicio, e.IdServicio, e.IdFalla, e.IdRegion, e.IdZona, e.IdTecnico, e.FecGarantia, e.FecCierre, e.DescripcionTrabajo, e.IsExito, e.IdProducto, e.IdAr, e.IdCarga, e.IdCliente, e.ClaveRechazo, e.Status, e.IdProveedor, e.IdStatusAr })
+                entity.HasIndex(e => new { e.IdAr, e.IdCarga, e.IdCliente, e.ClaveRechazo, e.NoAr, e.Concepto, e.DescCorta, e.Sintoma, e.Bitacora, e.NoAfiliacion, e.DescNegocio, e.FecInicio, e.IdServicio, e.IdFalla, e.IdRegion, e.IdZona, e.IdTecnico, e.FecGarantia, e.FecCierre, e.DescripcionTrabajo, e.IsExito, e.IdProducto, e.Status, e.IdProveedor, e.IdStatusAr })
                     .HasName("missing_index_4098_4097");
 
-                entity.HasIndex(e => new { e.Concepto, e.DescCorta, e.Sintoma, e.Bitacora, e.NoAfiliacion, e.FecInicio, e.IdServicio, e.IdFalla, e.IdRegion, e.IdZona, e.NoAr, e.FecAlta, e.FecGarantia, e.FecCierre, e.DescripcionTrabajo, e.IsExito, e.DescNegocio, e.IdAr, e.IdCarga, e.IdCliente, e.IdProducto, e.ClaveRechazo, e.IdTecnico, e.Status, e.IdProveedor, e.IdStatusAr })
+                entity.HasIndex(e => new { e.FecInicio, e.IdServicio, e.IdFalla, e.IdRegion, e.IdZona, e.NoAr, e.FecAlta, e.FecGarantia, e.FecCierre, e.DescripcionTrabajo, e.IsExito, e.DescNegocio, e.IdAr, e.IdCarga, e.IdCliente, e.IdProducto, e.ClaveRechazo, e.IdTecnico, e.Concepto, e.DescCorta, e.Sintoma, e.Bitacora, e.NoAfiliacion, e.Status, e.IdProveedor, e.IdStatusAr })
                     .HasName("missing_index_4007_4006");
 
-                entity.HasIndex(e => new { e.DescCorta, e.Sintoma, e.Bitacora, e.NoAfiliacion, e.DescNegocio, e.IdAr, e.IdServicio, e.IdFalla, e.IdRegion, e.IdZona, e.IdTecnico, e.Concepto, e.FecGarantia, e.FecCierre, e.DescripcionTrabajo, e.IsExito, e.IdProducto, e.FecInicio, e.IdCarga, e.IdCliente, e.NoAr, e.ClaveRechazo, e.IdProveedor, e.FecAlta, e.IdStatusAr, e.Status })
+                entity.HasIndex(e => new { e.IdServicio, e.IdFalla, e.IdRegion, e.IdZona, e.IdTecnico, e.Concepto, e.FecGarantia, e.FecCierre, e.DescripcionTrabajo, e.IsExito, e.IdProducto, e.FecInicio, e.IdCarga, e.IdCliente, e.NoAr, e.ClaveRechazo, e.IdProveedor, e.FecAlta, e.DescCorta, e.Sintoma, e.Bitacora, e.NoAfiliacion, e.DescNegocio, e.IdAr, e.IdStatusAr, e.Status })
                     .HasName("missing_index_3806_3805");
 
-                entity.HasIndex(e => new { e.Colonia, e.IdAr, e.FecInicio, e.Bitacora, e.NoAfiliacion, e.Telefono, e.DescNegocio, e.Direccion, e.FecGarantia, e.Poblacion, e.Estado, e.Cp, e.Equipo, e.DescEquipo, e.IdProyecto, e.IdSegmento, e.IdServicio, e.IdFalla, e.IdTecnico, e.FecAtencion, e.ClaveRechazo, e.FecCierre, e.IntensidadSenial, e.DescripcionTrabajo, e.Atiende, e.IdCausaRechazo, e.IdProveedor, e.IdProducto, e.MotivoRetipificado, e.DigitoVerificador, e.Insumos, e.Caja, e.NoAr, e.Sintoma, e.IdTipoEquipo, e.CorreoEjecutivo, e.TerminalAmex, e.DireccionAlternaComercio, e.IdRegion, e.Status, e.IdStatusAr })
+                entity.HasIndex(e => new { e.FecInicio, e.Bitacora, e.NoAfiliacion, e.Telefono, e.DescNegocio, e.Direccion, e.FecGarantia, e.Poblacion, e.Estado, e.Cp, e.Equipo, e.DescEquipo, e.IdProyecto, e.IdSegmento, e.IdServicio, e.IdFalla, e.IdTecnico, e.FecAtencion, e.ClaveRechazo, e.FecCierre, e.IntensidadSenial, e.DescripcionTrabajo, e.Atiende, e.IdCausaRechazo, e.IdProveedor, e.IdProducto, e.MotivoRetipificado, e.DigitoVerificador, e.Insumos, e.Caja, e.NoAr, e.Sintoma, e.IdTipoEquipo, e.CorreoEjecutivo, e.TerminalAmex, e.DireccionAlternaComercio, e.Colonia, e.IdAr, e.IdRegion, e.Status, e.IdStatusAr })
                     .HasName("missing_index_4014_4013");
 
-                entity.HasIndex(e => new { e.Equipo, e.Segmento, e.NoSerie, e.IdServicio, e.IdFalla, e.IdRegion, e.NoAfiliacion, e.Estado, e.Cp, e.IdTecnico, e.FecAlta, e.FecAtencion, e.FecInicio, e.FecConvenio, e.IdSegmento, e.IdUsuarioCierre, e.IdCausa, e.IdSolucion, e.IdZona, e.IdTipoPlaza, e.IdPlaza, e.CausaRechazo, e.CausaCancelacion, e.IsExito, e.FecGarantia, e.FecCierre, e.FecAltaHorasAtencion, e.IdConectividad, e.IdAplicativo, e.FolioTelecarga, e.NoEquipo, e.IsSimRemplazada, e.IdCausaRechazo, e.IdTipoEquipo, e.CorreoEjecutivo, e.IdProveedor, e.IdProyecto, e.VoltajeTierra, e.NoSim, e.IdAr, e.IdCarga, e.IdCliente, e.NoAr, e.Status, e.IdStatusAr })
+                entity.HasIndex(e => new { e.IdAr, e.IdCarga, e.IdCliente, e.NoAr, e.Equipo, e.Segmento, e.NoSerie, e.IdServicio, e.IdFalla, e.IdRegion, e.NoAfiliacion, e.Estado, e.Cp, e.IdTecnico, e.FecAlta, e.FecAtencion, e.FecInicio, e.FecConvenio, e.IdSegmento, e.IdUsuarioCierre, e.IdCausa, e.IdSolucion, e.IdZona, e.IdTipoPlaza, e.IdPlaza, e.CausaRechazo, e.CausaCancelacion, e.IsExito, e.FecGarantia, e.FecCierre, e.FecAltaHorasAtencion, e.IdConectividad, e.IdAplicativo, e.FolioTelecarga, e.NoEquipo, e.IsSimRemplazada, e.IdCausaRechazo, e.IdTipoEquipo, e.CorreoEjecutivo, e.IdProveedor, e.IdProyecto, e.VoltajeTierra, e.NoSim, e.Status, e.IdStatusAr })
                     .HasName("missing_index_3620_3619");
 
                 entity.Property(e => e.IdAr).HasColumnName("ID_AR");
@@ -1579,6 +1624,10 @@ namespace WebApiMovil.Models
 
                 entity.Property(e => e.IsTecnicoForaneo).HasColumnName("IS_TECNICO_FORANEO");
 
+                entity.Property(e => e.MiComercio)
+                    .HasColumnName("MI_COMERCIO")
+                    .HasMaxLength(100);
+
                 entity.Property(e => e.MinsDowntime)
                     .HasColumnName("MINS_DOWNTIME")
                     .HasDefaultValueSql("((0))");
@@ -1754,6 +1803,12 @@ namespace WebApiMovil.Models
 
                 entity.ToTable("BD_AR_ACCESORIOS");
 
+                entity.HasIndex(e => e.IdAr)
+                    .HasName("IX_BD_AR_ACCESORIOS");
+
+                entity.HasIndex(e => e.Movimiento)
+                    .HasName("IX_BD_AR_ACCESORIOS_1");
+
                 entity.Property(e => e.IdArAccesorio).HasColumnName("ID_AR_ACCESORIO");
 
                 entity.Property(e => e.Base)
@@ -1777,6 +1832,10 @@ namespace WebApiMovil.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.IdAr).HasColumnName("ID_AR");
+
+                entity.Property(e => e.Movimiento)
+                    .HasColumnName("MOVIMIENTO")
+                    .HasMaxLength(20);
 
                 entity.Property(e => e.Tapa)
                     .HasColumnName("TAPA")
@@ -1953,6 +2012,8 @@ namespace WebApiMovil.Models
 
                 entity.Property(e => e.IdCarrierRet).HasColumnName("ID_CARRIER_RET");
 
+                entity.Property(e => e.IdCierreMasivo).HasColumnName("ID_CIERRE_MASIVO");
+
                 entity.Property(e => e.IdConectividadCambioConect).HasColumnName("ID_CONECTIVIDAD_CAMBIO_CONECT");
 
                 entity.Property(e => e.IdConectividadCambioConectNueva).HasColumnName("ID_CONECTIVIDAD_CAMBIO_CONECT_NUEVA");
@@ -1996,6 +2057,10 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.NoSerieRetiro)
                     .HasColumnName("NO_SERIE_RETIRO")
                     .HasMaxLength(30);
+
+                entity.Property(e => e.Origen)
+                    .HasColumnName("ORIGEN")
+                    .HasMaxLength(3);
 
                 entity.Property(e => e.OtorganteVobo)
                     .HasColumnName("OTORGANTE_VOBO")
@@ -2322,6 +2387,38 @@ namespace WebApiMovil.Models
                     .IsUnicode(false);
             });
 
+            modelBuilder.Entity<BdArMiComercio>(entity =>
+            {
+                entity.HasKey(e => e.IdArMiComercio)
+                    .HasName("PK__BD_AR_MI__75E1F5CA36CC9253");
+
+                entity.ToTable("BD_AR_MI_COMERCIO");
+
+                entity.Property(e => e.IdArMiComercio).HasColumnName("ID_AR_MI_COMERCIO");
+
+                entity.Property(e => e.DescargarApp).HasColumnName("DESCARGAR_APP");
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdAr).HasColumnName("ID_AR");
+
+                entity.Property(e => e.Notificado).HasColumnName("NOTIFICADO");
+
+                entity.Property(e => e.Promociones).HasColumnName("PROMOCIONES");
+
+                entity.Property(e => e.Telefono1)
+                    .HasColumnName("TELEFONO_1")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Telefono2)
+                    .HasColumnName("TELEFONO_2")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<BdArPaso>(entity =>
             {
                 entity.HasKey(e => e.IdArPaso)
@@ -2564,13 +2661,13 @@ namespace WebApiMovil.Models
                 entity.HasIndex(e => new { e.IdArPrefacturacion, e.IdAr, e.IdTipoResponsableDoctoPrefacturacionFisico, e.IdStatusDoctoPrefacturacionFisico, e.IdTipoResponsableDoctoPrefacturacionDigital, e.IdStatusDoctoPrefacturacionDigital, e.Status })
                     .HasName("IX_MI_BD_AR_PREFACTURACION_6509_6508");
 
-                entity.HasIndex(e => new { e.IdAr, e.IdTipoResponsableDoctoPrefacturacionFisico, e.IdResponsableDoctoPrefacturacionFisico, e.IdStatusDoctoPrefacturacionFisico, e.IdTipoResponsableDoctoPrefacturacionDigital, e.IdStatusDoctoPrefacturacionDigital, e.IdArPrefacturacion, e.Status })
-                    .HasName("IX_MI_BD_AR_PREFACTURACION_122_121");
+                entity.HasIndex(e => new { e.IdTipoResponsableDoctoPrefacturacionFisico, e.IdStatusDoctoPrefacturacionFisico, e.IdTipoResponsableDoctoPrefacturacionDigital, e.IdStatusDoctoPrefacturacionDigital, e.IdArPrefacturacion, e.IdAr, e.Status })
+                    .HasName("IX_BD_AR_PREFACTURACION_STATUS");
 
                 entity.HasIndex(e => new { e.IdArPrefacturacion, e.IdAr, e.IdTipoResponsableDoctoPrefacturacionFisico, e.IdResponsableDoctoPrefacturacionFisico, e.IdStatusDoctoPrefacturacionFisico, e.IdTipoResponsableDoctoPrefacturacionDigital, e.IdStatusDoctoPrefacturacionDigital, e.Status })
                     .HasName("IX_MI_BD_AR_PREFACTURACION_13804_13803");
 
-                entity.HasIndex(e => new { e.IdStatusDoctoPrefacturacionFisico, e.IdTipoResponsableDoctoPrefacturacionDigital, e.IdStatusDoctoPrefacturacionDigital, e.IdArPrefacturacion, e.IdTipoResponsableDoctoPrefacturacionFisico, e.IdResponsableDoctoPrefacturacionFisico, e.IdAr, e.Status })
+                entity.HasIndex(e => new { e.IdArPrefacturacion, e.IdTipoResponsableDoctoPrefacturacionFisico, e.IdResponsableDoctoPrefacturacionFisico, e.IdStatusDoctoPrefacturacionFisico, e.IdTipoResponsableDoctoPrefacturacionDigital, e.IdStatusDoctoPrefacturacionDigital, e.IdAr, e.Status })
                     .HasName("IX_BD_AR_PREFACTURACION_ID_AR, STATUS");
 
                 entity.Property(e => e.IdArPrefacturacion).HasColumnName("ID_AR_PREFACTURACION");
@@ -2615,6 +2712,53 @@ namespace WebApiMovil.Models
                     .HasColumnName("STATUS")
                     .HasMaxLength(10)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<BdArSegmento>(entity =>
+            {
+                entity.HasKey(e => e.IdArSegmento)
+                    .HasName("PK_BD_AR_SEGMENTO_");
+
+                entity.ToTable("BD_AR_SEGMENTO");
+
+                entity.Property(e => e.IdArSegmento).HasColumnName("ID_AR_SEGMENTO");
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdAr).HasColumnName("ID_AR");
+
+                entity.Property(e => e.IdSegmentoElavon).HasColumnName("ID_SEGMENTO_ELAVON");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+            });
+
+            modelBuilder.Entity<BdArSegmentoFail>(entity =>
+            {
+                entity.HasKey(e => e.IdArSegmento)
+                    .HasName("PK_BD_AR_SEGMENTO");
+
+                entity.ToTable("BD_AR_SEGMENTO_FAIL");
+
+                entity.HasIndex(e => e.IdAr)
+                    .HasName("IX_BD_AR_SEGMENTO");
+
+                entity.HasIndex(e => e.IdSegmentoElavon)
+                    .HasName("IX_BD_AR_SEGMENTO_2");
+
+                entity.HasIndex(e => new { e.IdAr, e.IdArSegmento })
+                    .HasName("IX_BD_AR_SEGMENTO_1");
+
+                entity.Property(e => e.IdArSegmento).HasColumnName("ID_AR_SEGMENTO");
+
+                entity.Property(e => e.FecAlta).HasColumnName("FEC_ALTA");
+
+                entity.Property(e => e.IdAr).HasColumnName("ID_AR");
+
+                entity.Property(e => e.IdSegmentoElavon).HasColumnName("ID_SEGMENTO_ELAVON");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
             });
 
             modelBuilder.Entity<BdArSparePart>(entity =>
@@ -2951,6 +3095,40 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.Mensaje)
                     .HasColumnName("MENSAJE")
                     .HasMaxLength(255)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<BdAsignacionTecnicoArLog>(entity =>
+            {
+                entity.HasKey(e => e.IdAsignacionTecnicoArLog)
+                    .HasName("PK__BD_ASIGN__A04A5496250020B2");
+
+                entity.ToTable("BD_ASIGNACION_TECNICO_AR_LOG");
+
+                entity.Property(e => e.IdAsignacionTecnicoArLog).HasColumnName("ID_ASIGNACION_TECNICO_AR_LOG");
+
+                entity.Property(e => e.Error)
+                    .HasColumnName("ERROR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdCargaMasiva).HasColumnName("ID_CARGA_MASIVA");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+
+                entity.Property(e => e.Odt)
+                    .HasColumnName("ODT")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Tecnico)
+                    .HasColumnName("TECNICO")
                     .IsUnicode(false);
             });
 
@@ -3514,6 +3692,172 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
             });
 
+            modelBuilder.Entity<BdBitacoraBdNegocios>(entity =>
+            {
+                entity.HasKey(e => e.IdBitacoraBdNegocios)
+                    .HasName("PK__BD_BITAC__0E4591F62EB46A76");
+
+                entity.ToTable("BD_BITACORA_BD_NEGOCIOS");
+
+                entity.Property(e => e.IdBitacoraBdNegocios).HasColumnName("ID_BITACORA_BD_NEGOCIOS");
+
+                entity.Property(e => e.ColoniaActual)
+                    .HasColumnName("COLONIA_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ColoniaAnterior)
+                    .HasColumnName("COLONIA_ANTERIOR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.CpActual)
+                    .HasColumnName("CP_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.CpAnterior)
+                    .HasColumnName("CP_ANTERIOR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.DescNegocioActual)
+                    .HasColumnName("DESC_NEGOCIO_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.DescNegocioAnterior)
+                    .HasColumnName("DESC_NEGOCIO_ANTERIOR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.DireccionActual)
+                    .HasColumnName("DIRECCION_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.DireccionAnterior)
+                    .HasColumnName("DIRECCION_ANTERIOR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.EstadoActual)
+                    .HasColumnName("ESTADO_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.EstadoAnterior)
+                    .HasColumnName("ESTADO_ANTERIOR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FecAltaIgualaActual)
+                    .HasColumnName("FEC_ALTA_IGUALA_ACTUAL")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FecAltaIgualaAnterior)
+                    .HasColumnName("FEC_ALTA_IGUALA_ANTERIOR")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FecBajaIgualaActual)
+                    .HasColumnName("FEC_BAJA_IGUALA_ACTUAL")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FecBajaIgualaAnterior)
+                    .HasColumnName("FEC_BAJA_IGUALA_ANTERIOR")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdClienteActual).HasColumnName("ID_CLIENTE_ACTUAL");
+
+                entity.Property(e => e.IdClienteAnterior).HasColumnName("ID_CLIENTE_ANTERIOR");
+
+                entity.Property(e => e.IdEstadoActual).HasColumnName("ID_ESTADO_ACTUAL");
+
+                entity.Property(e => e.IdEstadoAnterior).HasColumnName("ID_ESTADO_ANTERIOR");
+
+                entity.Property(e => e.IdHorarioAccesoActual).HasColumnName("ID_HORARIO_ACCESO_ACTUAL");
+
+                entity.Property(e => e.IdHorarioAccesoAnterior).HasColumnName("ID_HORARIO_ACCESO_ANTERIOR");
+
+                entity.Property(e => e.IdHorarioUptimeActual).HasColumnName("ID_HORARIO_UPTIME_ACTUAL");
+
+                entity.Property(e => e.IdHorarioUptimeAnterior).HasColumnName("ID_HORARIO_UPTIME_ANTERIOR");
+
+                entity.Property(e => e.IdMonedaActual).HasColumnName("ID_MONEDA_ACTUAL");
+
+                entity.Property(e => e.IdMonedaAnterior).HasColumnName("ID_MONEDA_ANTERIOR");
+
+                entity.Property(e => e.IdNegocio).HasColumnName("ID_NEGOCIO");
+
+                entity.Property(e => e.IdRegionActual).HasColumnName("ID_REGION_ACTUAL");
+
+                entity.Property(e => e.IdRegionAnterior).HasColumnName("ID_REGION_ANTERIOR");
+
+                entity.Property(e => e.IdSegmentoActual).HasColumnName("ID_SEGMENTO_ACTUAL");
+
+                entity.Property(e => e.IdSegmentoAnterior).HasColumnName("ID_SEGMENTO_ANTERIOR");
+
+                entity.Property(e => e.IdTipoCobroNegocioActual).HasColumnName("ID_TIPO_COBRO_NEGOCIO_ACTUAL");
+
+                entity.Property(e => e.IdTipoCobroNegocioAnterior).HasColumnName("ID_TIPO_COBRO_NEGOCIO_ANTERIOR");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+
+                entity.Property(e => e.IdZonaActual).HasColumnName("ID_ZONA_ACTUAL");
+
+                entity.Property(e => e.IdZonaAnterior).HasColumnName("ID_ZONA_ANTERIOR");
+
+                entity.Property(e => e.LatitudActual)
+                    .HasColumnName("LATITUD_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LatitudAnterior)
+                    .HasColumnName("LATITUD_ANTERIOR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LongitudActual)
+                    .HasColumnName("LONGITUD_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.LongitudAnterior)
+                    .HasColumnName("LONGITUD_ANTERIOR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.NoAfiliacionActual)
+                    .HasColumnName("NO_AFILIACION_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.NoAfiliacionAnterior)
+                    .HasColumnName("NO_AFILIACION_ANTERIOR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.PoblacionActual)
+                    .HasColumnName("POBLACION_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.PoblacionAnterior)
+                    .HasColumnName("POBLACION_ANTERIOR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.PrecioActual)
+                    .HasColumnName("PRECIO_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.PrecioAnterior)
+                    .HasColumnName("PRECIO_ANTERIOR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.StatusActual)
+                    .HasColumnName("STATUS_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.StatusAnterior)
+                    .HasColumnName("STATUS_ANTERIOR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.TelefonoActual)
+                    .HasColumnName("TELEFONO_ACTUAL")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.TelefonoAnterior)
+                    .HasColumnName("TELEFONO_ANTERIOR")
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<BdBitacoraBorrarUnidad>(entity =>
             {
                 entity.HasKey(e => e.IdBitacoraBorrarUnidad);
@@ -3529,6 +3873,40 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.IdUnidad).HasColumnName("ID_UNIDAD");
 
                 entity.Property(e => e.IdUsuarioBorrado).HasColumnName("ID_USUARIO_BORRADO");
+            });
+
+            modelBuilder.Entity<BdBitacoraCambioFecGarantia>(entity =>
+            {
+                entity.HasKey(e => e.IdBitacoraCambioFecGarantia)
+                    .HasName("PK__BD_BITAC__4A98A30D45697639");
+
+                entity.ToTable("BD_BITACORA_CAMBIO_FEC_GARANTIA");
+
+                entity.Property(e => e.IdBitacoraCambioFecGarantia).HasColumnName("ID_BITACORA_CAMBIO_FEC_GARANTIA");
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FecAtencionActual)
+                    .HasColumnName("FEC_ATENCION_ACTUAL")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FecAtencionAnterior)
+                    .HasColumnName("FEC_ATENCION_ANTERIOR")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FecGarantiaActual)
+                    .HasColumnName("FEC_GARANTIA_ACTUAL")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FecGarantiaAnterior)
+                    .HasColumnName("FEC_GARANTIA_ANTERIOR")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdAr).HasColumnName("ID_AR");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
             });
 
             modelBuilder.Entity<BdBitacoraCambioMensajeria>(entity =>
@@ -3772,6 +4150,28 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.IdTecnicoCambio).HasColumnName("ID_TECNICO_CAMBIO");
 
                 entity.Property(e => e.IdUnidad).HasColumnName("ID_UNIDAD");
+            });
+
+            modelBuilder.Entity<BdBitacoraDiasFestivos>(entity =>
+            {
+                entity.HasKey(e => e.IdBitacoraDiasFestivos)
+                    .HasName("PK__BD_BITAC__0DD961F7C4B90030");
+
+                entity.ToTable("BD_BITACORA_DIAS_FESTIVOS");
+
+                entity.Property(e => e.IdBitacoraDiasFestivos).HasColumnName("ID_BITACORA_DIAS_FESTIVOS");
+
+                entity.Property(e => e.Comentario)
+                    .HasColumnName("COMENTARIO")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdFestivos).HasColumnName("ID_FESTIVOS");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
             });
 
             modelBuilder.Entity<BdBitacoraDoctosPrefacturacion>(entity =>
@@ -4120,6 +4520,32 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.IdTipoResponsableOrigen).HasColumnName("ID_TIPO_RESPONSABLE_ORIGEN");
 
                 entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+            });
+
+            modelBuilder.Entity<BdBitacoraNegociosCoordenadas>(entity =>
+            {
+                entity.HasKey(e => e.IdBitcoraNegocioCoordenada)
+                    .HasName("PK__BD_BITAC__BA413A8D1C0DEAFA");
+
+                entity.ToTable("BD_BITACORA_NEGOCIOS_COORDENADAS");
+
+                entity.Property(e => e.IdBitcoraNegocioCoordenada).HasColumnName("ID_BITCORA_NEGOCIO_COORDENADA");
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdNegocio).HasColumnName("ID_NEGOCIO");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+
+                entity.Property(e => e.Latitud)
+                    .HasColumnName("LATITUD")
+                    .HasColumnType("numeric(20, 15)");
+
+                entity.Property(e => e.Longitud)
+                    .HasColumnName("LONGITUD")
+                    .HasColumnType("numeric(20, 15)");
             });
 
             modelBuilder.Entity<BdBitacoraNoInsumoAr>(entity =>
@@ -7436,6 +7862,22 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.Status).HasColumnName("STATUS");
             });
 
+            modelBuilder.Entity<BdCargaChangeComentarios>(entity =>
+            {
+                entity.HasKey(e => e.IdCarga)
+                    .HasName("PK__BD_CARGA__6F4DBE3DAA07C684");
+
+                entity.ToTable("BD_CARGA_CHANGE_COMENTARIOS");
+
+                entity.Property(e => e.IdCarga).HasColumnName("ID_CARGA");
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+            });
+
             modelBuilder.Entity<BdCargaChangeStatus>(entity =>
             {
                 entity.HasKey(e => e.IdCarga)
@@ -7450,149 +7892,6 @@ namespace WebApiMovil.Models
                     .HasColumnType("datetime");
 
                 entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
-            });
-
-            modelBuilder.Entity<BdCargaCierreMasivoMinv>(entity =>
-            {
-                entity.HasKey(e => e.IdCierre)
-                    .HasName("PK__BD_CARGA__62D6306DF418DE4G");
-
-                entity.ToTable("BD_CARGA_CIERRE_MASIVO_MINV");
-
-                entity.Property(e => e.IdCierre).HasColumnName("ID_CIERRE");
-
-                entity.Property(e => e.ActReferencias)
-                    .HasColumnName("ACT_REFERENCIAS")
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.AfiliacionAmex)
-                    .HasColumnName("AFILIACION_AMEX")
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.AmexSiNo)
-                    .HasColumnName("AMEX_si_no")
-                    .HasMaxLength(2)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Aplicacion)
-                    .HasColumnName("APLICACION")
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.AplicativoEntrada).HasColumnName("APLICATIVO_ENTRADA");
-
-                entity.Property(e => e.ArchivoCarga)
-                    .HasColumnName("ARCHIVO_CARGA")
-                    .HasMaxLength(250)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Atiende).HasColumnName("ATIENDE");
-
-                entity.Property(e => e.Caja)
-                    .HasColumnName("CAJA")
-                    .HasMaxLength(3)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.ComentariosServicio)
-                    .HasColumnName("COMENTARIOS_SERVICIO")
-                    .HasMaxLength(3000)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.ConclusionesAmex)
-                    .HasColumnName("CONCLUSIONES_AMEX")
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.ConectividadEntrada).HasColumnName("CONECTIVIDAD_ENTRADA");
-
-                entity.Property(e => e.Correo)
-                    .HasColumnName("CORREO")
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Discover)
-                    .HasColumnName("DISCOVER")
-                    .HasMaxLength(10)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.FechaCarga)
-                    .HasColumnName("FECHA_CARGA")
-                    .HasColumnType("smalldatetime");
-
-                entity.Property(e => e.FechaCierre)
-                    .HasColumnName("FECHA_CIERRE")
-                    .HasColumnType("smalldatetime");
-
-                entity.Property(e => e.HoraCierre)
-                    .HasColumnName("HORA_CIERRE")
-                    .HasColumnType("smalldatetime");
-
-                entity.Property(e => e.IdCausaCancelacion)
-                    .HasColumnName("ID_CAUSA_CANCELACION")
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.IdCriterioCambio).HasColumnName("ID_CRITERIO_CAMBIO");
-
-                entity.Property(e => e.IdRechazo).HasColumnName("ID_RECHAZO");
-
-                entity.Property(e => e.InstalacionesElavonDescModelo).HasColumnName("INSTALACIONES_ELAVON_DESC_MODELO");
-
-                entity.Property(e => e.InstalacionesElavonNoSerie)
-                    .HasColumnName("INSTALACIONES_ELAVON_NO_SERIE")
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.MinutoCierre)
-                    .HasColumnName("MINUTO_CIERRE")
-                    .HasColumnType("smalldatetime");
-
-                entity.Property(e => e.Odtexterna)
-                    .HasColumnName("ODTEXTERNA")
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.OtorganteVobo)
-                    .HasColumnName("OTORGANTE_VOBO")
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.OtorganteVoboRechazo)
-                    .HasColumnName("OTORGANTE_VOBO_RECHAZO")
-                    .HasMaxLength(150)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.RetirosElavonDescModelo).HasColumnName("RETIROS_ELAVON_DESC_MODELO");
-
-                entity.Property(e => e.RetirosElavonNoSerie).HasColumnName("RETIROS_ELAVON_NO_SERIE");
-
-                entity.Property(e => e.Rollosinst)
-                    .HasColumnName("ROLLOSINST")
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Status).HasColumnName("STATUS");
-
-                entity.Property(e => e.Subrechazo)
-                    .HasColumnName("SUBRECHAZO")
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.TelefonoCampo)
-                    .HasColumnName("TELEFONO_CAMPO")
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.TipoAtencion).HasColumnName("TIPO_ATENCION");
-
-                entity.Property(e => e.UsuarioCarga).HasColumnName("USUARIO_CARGA");
-
-                entity.Property(e => e.Version)
-                    .HasColumnName("VERSION")
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<BdCargaCierresMasivos>(entity =>
@@ -7893,6 +8192,10 @@ namespace WebApiMovil.Models
                     .HasColumnName("COMENTARIOS")
                     .IsUnicode(false);
 
+                entity.Property(e => e.ComercioNotificado)
+                    .HasColumnName("COMERCIO_NOTIFICADO")
+                    .HasMaxLength(2);
+
                 entity.Property(e => e.ConclusionesAmex)
                     .HasColumnName("CONCLUSIONES_AMEX")
                     .HasMaxLength(300);
@@ -7964,6 +8267,10 @@ namespace WebApiMovil.Models
                     .HasColumnName("ID_CONECTIVIDAD_INSTALACION")
                     .HasMaxLength(200);
 
+                entity.Property(e => e.IdCriterioCambio)
+                    .HasColumnName("ID_CRITERIO_CAMBIO")
+                    .HasMaxLength(100);
+
                 entity.Property(e => e.IdMarcaRetiro)
                     .HasColumnName("ID_MARCA_RETIRO")
                     .HasMaxLength(100);
@@ -8033,9 +8340,17 @@ namespace WebApiMovil.Models
                     .HasColumnName("RUTA")
                     .HasMaxLength(255);
 
+                entity.Property(e => e.SeBajoApp)
+                    .HasColumnName("SE_BAJO_APP")
+                    .HasMaxLength(2);
+
                 entity.Property(e => e.SeDejaMismoSim)
                     .HasColumnName("SE_DEJA_MISMO_SIM")
                     .HasMaxLength(20);
+
+                entity.Property(e => e.SiReqPromo)
+                    .HasColumnName("SI_REQ_PROMO")
+                    .HasMaxLength(2);
 
                 entity.Property(e => e.SimInstalacion)
                     .HasColumnName("SIM_INSTALACION")
@@ -8058,6 +8373,278 @@ namespace WebApiMovil.Models
                     .HasColumnName("TECNICO")
                     .HasMaxLength(100);
 
+                entity.Property(e => e.Telefono1)
+                    .HasColumnName("TELEFONO_1")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Telefono2)
+                    .HasColumnName("TELEFONO_2")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Tipo)
+                    .HasColumnName("TIPO")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.TipoAtencion)
+                    .IsRequired()
+                    .HasColumnName("TIPO_ATENCION")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.VersionInstalacion)
+                    .HasColumnName("VERSION_INSTALACION")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.VersionRetiro)
+                    .HasColumnName("VERSION_RETIRO")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.YearCierre)
+                    .IsRequired()
+                    .HasColumnName("YEAR_CIERRE")
+                    .HasMaxLength(10);
+            });
+
+            modelBuilder.Entity<BdCargaCierresMasivosTextoMit>(entity =>
+            {
+                entity.HasKey(e => e.IdCierreMasivo);
+
+                entity.ToTable("BD_CARGA_CIERRES_MASIVOS_TEXTO_MIT");
+
+                entity.Property(e => e.IdCierreMasivo).HasColumnName("ID_CIERRE_MASIVO");
+
+                entity.Property(e => e.AfiliacionAmex)
+                    .HasColumnName("AFILIACION_AMEX")
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Atiende)
+                    .IsRequired()
+                    .HasColumnName("ATIENDE")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.BaseInstalacion)
+                    .HasColumnName("BASE_INSTALACION")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.BaseRetiro)
+                    .HasColumnName("BASE_RETIRO")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.BateriaInstalacion)
+                    .HasColumnName("BATERIA_INSTALACION")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.BateriaRetiro)
+                    .HasColumnName("BATERIA_RETIRO")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.CableAcInstalacion)
+                    .HasColumnName("CABLE_AC_INSTALACION")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.CableAcRetiro)
+                    .HasColumnName("CABLE_AC_RETIRO")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.Caja)
+                    .IsRequired()
+                    .HasColumnName("CAJA")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Comentarios)
+                    .IsRequired()
+                    .HasColumnName("COMENTARIOS")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ComercioNotificado)
+                    .HasColumnName("COMERCIO_NOTIFICADO")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.ConclusionesAmex)
+                    .HasColumnName("CONCLUSIONES_AMEX")
+                    .HasMaxLength(300);
+
+                entity.Property(e => e.DayCierre)
+                    .IsRequired()
+                    .HasColumnName("DAY_CIERRE")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Discover)
+                    .IsRequired()
+                    .HasColumnName("DISCOVER")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.EliminadorInstalacion)
+                    .HasColumnName("ELIMINADOR_INSTALACION")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.EliminadorRetiro)
+                    .HasColumnName("ELIMINADOR_RETIRO")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.EsAmex)
+                    .HasColumnName("ES_AMEX")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.EstatusOdt).HasColumnName("ESTATUS_ODT");
+
+                entity.Property(e => e.EstatusProceso)
+                    .HasColumnName("ESTATUS_PROCESO")
+                    .HasMaxLength(15);
+
+                entity.Property(e => e.FechaCarga)
+                    .HasColumnName("FECHA_CARGA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FileName)
+                    .IsRequired()
+                    .HasColumnName("FILE_NAME")
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.HourCierre)
+                    .IsRequired()
+                    .HasColumnName("HOUR_CIERRE")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.IdAmex)
+                    .HasColumnName("ID_AMEX")
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.IdAplicativoInstalacion)
+                    .HasColumnName("ID_APLICATIVO_INSTALACION")
+                    .HasMaxLength(200);
+
+                entity.Property(e => e.IdAplicativoRetiro)
+                    .HasColumnName("ID_APLICATIVO_RETIRO")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.IdCancelacion)
+                    .HasColumnName("ID_CANCELACION")
+                    .HasMaxLength(200);
+
+                entity.Property(e => e.IdConectiidadRetiro)
+                    .HasColumnName("ID_CONECTIIDAD_RETIRO")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.IdConectividadInstalacion)
+                    .HasColumnName("ID_CONECTIVIDAD_INSTALACION")
+                    .HasMaxLength(200);
+
+                entity.Property(e => e.IdCriterioCambio)
+                    .HasColumnName("ID_CRITERIO_CAMBIO")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.IdMarcaRetiro)
+                    .HasColumnName("ID_MARCA_RETIRO")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.IdModeloRetiro)
+                    .HasColumnName("ID_MODELO_RETIRO")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.IdProceso)
+                    .IsRequired()
+                    .HasColumnName("ID_PROCESO")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.IdRechazo)
+                    .HasColumnName("ID_RECHAZO")
+                    .HasMaxLength(200);
+
+                entity.Property(e => e.IdSubRechazo)
+                    .HasColumnName("ID_SUB_RECHAZO")
+                    .HasMaxLength(200);
+
+                entity.Property(e => e.IdUsuarioCarga).HasColumnName("ID_USUARIO_CARGA");
+
+                entity.Property(e => e.MensajeError)
+                    .HasColumnName("MENSAJE_ERROR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.MinuteCierre)
+                    .IsRequired()
+                    .HasColumnName("MINUTE_CIERRE")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.MonthCierre)
+                    .IsRequired()
+                    .HasColumnName("MONTH_CIERRE")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.NoSeRetiraSim)
+                    .HasColumnName("NO_SE_RETIRA_SIM")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.NoSerieInstalacion)
+                    .HasColumnName("NO_SERIE_INSTALACION")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.NoSerieRetiro)
+                    .HasColumnName("NO_SERIE_RETIRO")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Odt)
+                    .IsRequired()
+                    .HasColumnName("ODT")
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.OtorgaVobo)
+                    .IsRequired()
+                    .HasColumnName("OTORGA_VOBO")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.RollosInstalados)
+                    .IsRequired()
+                    .HasColumnName("ROLLOS_INSTALADOS")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Ruta)
+                    .IsRequired()
+                    .HasColumnName("RUTA")
+                    .HasMaxLength(255);
+
+                entity.Property(e => e.SeBajoApp)
+                    .HasColumnName("SE_BAJO_APP")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.SeDejaMismoSim)
+                    .HasColumnName("SE_DEJA_MISMO_SIM")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.SiReqPromo)
+                    .HasColumnName("SI_REQ_PROMO")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.SimInstalacion)
+                    .HasColumnName("SIM_INSTALACION")
+                    .HasMaxLength(21);
+
+                entity.Property(e => e.SimRetiro)
+                    .HasColumnName("SIM_RETIRO")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.TapaInstalacion)
+                    .HasColumnName("TAPA_INSTALACION")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.TapaRetiro)
+                    .HasColumnName("TAPA_RETIRO")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.Tecnico)
+                    .IsRequired()
+                    .HasColumnName("TECNICO")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.Telefono1)
+                    .HasColumnName("TELEFONO_1")
+                    .HasMaxLength(10);
+
+                entity.Property(e => e.Telefono2)
+                    .HasColumnName("TELEFONO_2")
+                    .HasMaxLength(10);
+
                 entity.Property(e => e.Tipo)
                     .HasColumnName("TIPO")
                     .HasMaxLength(20);
@@ -8079,6 +8666,36 @@ namespace WebApiMovil.Models
                     .IsRequired()
                     .HasColumnName("YEAR_CIERRE")
                     .HasMaxLength(10);
+            });
+
+            modelBuilder.Entity<BdCargaCodigoRechazo>(entity =>
+            {
+                entity.HasKey(e => e.IdCargaCodigoRechazo)
+                    .HasName("PK__BD_CARGA__9461935A61E2383B");
+
+                entity.ToTable("BD_CARGA_CODIGO_RECHAZO");
+
+                entity.Property(e => e.IdCargaCodigoRechazo).HasColumnName("ID_CARGA_CODIGO_RECHAZO");
+
+                entity.Property(e => e.DescError)
+                    .HasColumnName("DESC_ERROR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdCarga).HasColumnName("ID_CARGA");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+
+                entity.Property(e => e.NoAr)
+                    .HasColumnName("NO_AR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<BdCargaEnviosDhlErrores>(entity =>
@@ -8357,12 +8974,6 @@ namespace WebApiMovil.Models
                     .HasName("IX_MI_BD_CARGAS_4850_4849");
 
                 entity.HasIndex(e => new { e.IdCarga, e.IdUsuarioAlta, e.IdCliente, e.Status, e.IdStatusCarga })
-                    .HasName("IX_MI_BD_CARGAS_3330_3329");
-
-                entity.HasIndex(e => new { e.IdCliente, e.IdUsuarioAlta, e.IdCarga, e.Status, e.IdStatusCarga })
-                    .HasName("IX_BD_CARGAS_STATUS_ID_STATUS_CARGA");
-
-                entity.HasIndex(e => new { e.IdUsuarioAlta, e.IdCarga, e.IdCliente, e.Status, e.IdStatusCarga })
                     .HasName("IX_MI_BD_CARGAS_8_7");
 
                 entity.Property(e => e.IdCarga).HasColumnName("ID_CARGA");
@@ -8507,17 +9118,17 @@ namespace WebApiMovil.Models
                 entity.HasIndex(e => new { e.Bitacora, e.Afiliacion, e.Cp, e.Producto, e.Estatus, e.Mensaje, e.IdCarga, e.Ar, e.Concepto, e.DescCorta, e.IdProceso })
                     .HasName("missing_index_4082_4081");
 
-                entity.HasIndex(e => new { e.Bitacora, e.IdSegmento, e.FechaInicio, e.Vip, e.Afiliacion, e.Telefono, e.Poblacion, e.Idproyecto, e.EmailChgb, e.Rollos, e.DescCorta, e.Sintoma, e.DescEquipo, e.Contacto2, e.TAfiliacion, e.Ejecutivo, e.Direccion, e.Colonia, e.Producto, e.Sucursal, e.Estatus, e.Mensaje, e.Rfc, e.IdEquipo, e.Concepto, e.Caja, e.Correo, e.Contacto1, e.AfiliacionAmex, e.FolioTelecargaAmex, e.Negocio, e.Estado, e.Cp, e.NotasRemedy, e.IdCarga, e.FileName, e.Ruta, e.Ar, e.IdProceso })
+                entity.HasIndex(e => new { e.Negocio, e.Estado, e.Cp, e.NotasRemedy, e.Bitacora, e.IdSegmento, e.FechaInicio, e.Vip, e.Afiliacion, e.Telefono, e.Poblacion, e.Idproyecto, e.EmailChgb, e.Rollos, e.DescCorta, e.Sintoma, e.DescEquipo, e.Contacto2, e.TAfiliacion, e.Ejecutivo, e.Direccion, e.Colonia, e.Producto, e.Sucursal, e.Estatus, e.Mensaje, e.Rfc, e.IdEquipo, e.Concepto, e.Caja, e.Correo, e.Contacto1, e.AfiliacionAmex, e.FolioTelecargaAmex, e.IdCarga, e.FileName, e.Ruta, e.Ar, e.IdProceso })
                     .HasName("missing_index_3658_3657");
-
-                entity.HasIndex(e => new { e.Concepto, e.IdEquipo, e.Sintoma, e.Bitacora, e.Afiliacion, e.Telefono, e.Direccion, e.FolioTelecargaAmex, e.Poblacion, e.Estado, e.Cp, e.NotasRemedy, e.Rfc, e.Correo, e.DescEquipo, e.IdSegmento, e.FechaInicio, e.Vip, e.AfiliacionAmex, e.Ejecutivo, e.Producto, e.Idproyecto, e.EmailChgb, e.Rollos, e.IdUsuario, e.Caja, e.Extra, e.Contacto1, e.Contacto2, e.TAfiliacion, e.FileName, e.Ruta, e.Ar, e.Sucursal, e.Estatus, e.Mensaje, e.Negocio, e.Colonia, e.IdCarga, e.IdProceso, e.DescCorta })
-                    .HasName("missing_index_3829_3828");
 
                 entity.HasIndex(e => new { e.IdCarga, e.IdProceso, e.FileName, e.Direccion, e.Rfc, e.DescCorta, e.Sintoma, e.Bitacora, e.Afiliacion, e.Telefono, e.FolioTelecargaAmex, e.Colonia, e.Poblacion, e.Estado, e.Cp, e.Concepto, e.Correo, e.IdEquipo, e.DescEquipo, e.FechaInicio, e.Vip, e.Negocio, e.Ejecutivo, e.Producto, e.Idproyecto, e.EmailChgb, e.Rollos, e.NotasRemedy, e.Caja, e.Extra, e.Contacto1, e.Contacto2, e.TAfiliacion, e.AfiliacionAmex, e.Ruta, e.Ar, e.Sucursal, e.Estatus, e.Mensaje, e.IdUsuario, e.IdSegmento })
                     .HasName("missing_index_3899_3898");
 
-                entity.HasIndex(e => new { e.IdEquipo, e.Sintoma, e.Bitacora, e.Afiliacion, e.Telefono, e.Negocio, e.FolioTelecargaAmex, e.Poblacion, e.Estado, e.Cp, e.NotasRemedy, e.DescCorta, e.Correo, e.DescEquipo, e.IdSegmento, e.FechaInicio, e.Vip, e.Direccion, e.Ejecutivo, e.Producto, e.Idproyecto, e.EmailChgb, e.Rollos, e.Rfc, e.Caja, e.Extra, e.Contacto1, e.Contacto2, e.TAfiliacion, e.AfiliacionAmex, e.Ruta, e.Ar, e.Sucursal, e.Estatus, e.Mensaje, e.IdUsuario, e.IdCarga, e.IdProceso, e.FileName, e.Colonia, e.Concepto })
+                entity.HasIndex(e => new { e.IdCarga, e.IdProceso, e.FileName, e.IdEquipo, e.Sintoma, e.Bitacora, e.Afiliacion, e.Telefono, e.Negocio, e.FolioTelecargaAmex, e.Poblacion, e.Estado, e.Cp, e.NotasRemedy, e.DescCorta, e.Correo, e.DescEquipo, e.IdSegmento, e.FechaInicio, e.Vip, e.Direccion, e.Ejecutivo, e.Producto, e.Idproyecto, e.EmailChgb, e.Rollos, e.Rfc, e.Caja, e.Extra, e.Contacto1, e.Contacto2, e.TAfiliacion, e.AfiliacionAmex, e.Ruta, e.Ar, e.Sucursal, e.Estatus, e.Mensaje, e.IdUsuario, e.Colonia, e.Concepto })
                     .HasName("missing_index_3831_3830");
+
+                entity.HasIndex(e => new { e.Negocio, e.Colonia, e.Concepto, e.IdEquipo, e.Sintoma, e.Bitacora, e.Afiliacion, e.Telefono, e.Direccion, e.FolioTelecargaAmex, e.Poblacion, e.Estado, e.Cp, e.NotasRemedy, e.Rfc, e.Correo, e.DescEquipo, e.IdSegmento, e.FechaInicio, e.Vip, e.AfiliacionAmex, e.Ejecutivo, e.Producto, e.Idproyecto, e.EmailChgb, e.Rollos, e.IdUsuario, e.Caja, e.Extra, e.Contacto1, e.Contacto2, e.TAfiliacion, e.FileName, e.Ruta, e.Ar, e.Sucursal, e.Estatus, e.Mensaje, e.IdCarga, e.IdProceso, e.DescCorta })
+                    .HasName("missing_index_3829_3828");
 
                 entity.HasIndex(e => new { e.Poblacion, e.Estado, e.Cp, e.Concepto, e.Rfc, e.DescCorta, e.DescEquipo, e.IdSegmento, e.FechaInicio, e.Negocio, e.AfiliacionAmex, e.Colonia, e.Producto, e.Idproyecto, e.EmailChgb, e.NotasRemedy, e.Caja, e.IdEquipo, e.Extra, e.Contacto1, e.Contacto2, e.Vip, e.TAfiliacion, e.FolioTelecargaAmex, e.Ejecutivo, e.Sucursal, e.Mensaje, e.IdUsuario, e.Rollos, e.Correo, e.IdCarga, e.IdProceso, e.FileName, e.Ruta, e.Ar, e.Sintoma, e.Bitacora, e.Afiliacion, e.Telefono, e.Direccion, e.Estatus })
                     .HasName("missing_index_3632_3631");
@@ -8637,6 +9248,10 @@ namespace WebApiMovil.Models
                     .HasColumnName("RUTA")
                     .HasMaxLength(200);
 
+                entity.Property(e => e.SegmentoElavon)
+                    .HasColumnName("SEGMENTO_ELAVON")
+                    .HasMaxLength(70);
+
                 entity.Property(e => e.Sintoma).HasColumnType("nvarchar(max)");
 
                 entity.Property(e => e.Sucursal)
@@ -8722,6 +9337,77 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.Tipo)
                     .HasColumnName("TIPO")
                     .HasMaxLength(15);
+            });
+
+            modelBuilder.Entity<BdChangeLog>(entity =>
+            {
+                entity.HasKey(e => e.IdChengeLog);
+
+                entity.ToTable("BD_CHANGE_LOG_");
+
+                entity.Property(e => e.IdChengeLog)
+                    .HasColumnName("ID_CHENGE_LOG")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.Descripcion)
+                    .IsRequired()
+                    .HasColumnName("DESCRIPCION")
+                    .HasMaxLength(500);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FecLiberacion)
+                    .HasColumnName("FEC_LIBERACION")
+                    .HasColumnType("date");
+
+                entity.Property(e => e.IdModulo).HasColumnName("ID_MODULO");
+
+                entity.Property(e => e.IdTipo).HasColumnName("ID_TIPO");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+
+                entity.Property(e => e.Liberado).HasColumnName("LIBERADO");
+            });
+
+            modelBuilder.Entity<BdChangeLog1>(entity =>
+            {
+                entity.HasKey(e => e.IdChangelog);
+
+                entity.ToTable("BD_CHANGE_LOG");
+
+                entity.Property(e => e.IdChangelog).HasColumnName("ID_CHANGELOG");
+
+                entity.Property(e => e.BorrarCache)
+                    .HasColumnName("BORRAR_CACHE")
+                    .HasMaxLength(2);
+
+                entity.Property(e => e.Descripcion)
+                    .HasColumnName("DESCRIPCION")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdModulo).HasColumnName("ID_MODULO");
+
+                entity.Property(e => e.IdOpcion).HasColumnName("ID_OPCION");
+
+                entity.Property(e => e.IdTipoChange).HasColumnName("ID_TIPO_CHANGE");
+
+                entity.Property(e => e.Liberacion)
+                    .HasColumnName("LIBERACION")
+                    .HasColumnType("date");
+
+                entity.Property(e => e.Nota)
+                    .HasColumnName("NOTA")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
+                    .HasMaxLength(20);
             });
 
             modelBuilder.Entity<BdChangeMassiveStatus>(entity =>
@@ -9794,6 +10480,32 @@ namespace WebApiMovil.Models
                     .IsUnicode(false);
             });
 
+            modelBuilder.Entity<BdDatosCierresAplicacion>(entity =>
+            {
+                entity.HasKey(e => e.IdDatoCierreAplicacion)
+                    .HasName("PK__BD_DATOS__2E0887BF27BA4384");
+
+                entity.ToTable("BD_DATOS_CIERRES_APLICACION");
+
+                entity.Property(e => e.IdDatoCierreAplicacion).HasColumnName("ID_DATO_CIERRE_APLICACION");
+
+                entity.Property(e => e.Datos)
+                    .HasColumnName("DATOS")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FechaCarga)
+                    .HasColumnName("FECHA_CARGA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdAr).HasColumnName("ID_AR");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+
+                entity.Property(e => e.TipoCierre)
+                    .HasColumnName("TIPO_CIERRE")
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<BdDbBackup>(entity =>
             {
                 entity.HasKey(e => e.IdDbBackup);
@@ -10480,7 +11192,7 @@ namespace WebApiMovil.Models
                 entity.HasIndex(e => new { e.IdResponsableDestino, e.IdServicioMensajeria, e.NoGuia, e.IdUrgenciaEnvio, e.FecEnvio, e.FecRecepcion, e.IdEnvio, e.IdTipoResponsableDestino, e.IdStatusEnvio, e.Status })
                     .HasName("IX_MI_BD_ENVIOS_6182_6181");
 
-                entity.HasIndex(e => new { e.IdEnvio, e.IdResponsableDestino, e.IdServicioMensajeria, e.NoGuia, e.Costo, e.IdUrgenciaEnvio, e.FecEnvio, e.FecRecepcion, e.IdTipoResponsableDestino, e.IdStatusEnvio, e.Status })
+                entity.HasIndex(e => new { e.IdUrgenciaEnvio, e.FecEnvio, e.FecRecepcion, e.IdEnvio, e.IdResponsableDestino, e.IdServicioMensajeria, e.NoGuia, e.Costo, e.IdTipoResponsableDestino, e.IdStatusEnvio, e.Status })
                     .HasName("IX_MI_BD_ENVIOS_13806_13805");
 
                 entity.Property(e => e.IdEnvio).HasColumnName("ID_ENVIO");
@@ -10774,6 +11486,31 @@ namespace WebApiMovil.Models
                     .IsUnicode(false);
             });
 
+            modelBuilder.Entity<BdEstadosProveedores>(entity =>
+            {
+                entity.HasKey(e => e.IdEstadoProveedor)
+                    .HasName("PK__BD_ESTAD__C52AAECC6A56A5B7");
+
+                entity.ToTable("BD_ESTADOS_PROVEEDORES");
+
+                entity.Property(e => e.IdEstadoProveedor).HasColumnName("ID_ESTADO_PROVEEDOR");
+
+                entity.Property(e => e.Cp)
+                    .HasColumnName("CP")
+                    .HasMaxLength(5)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdEstado).HasColumnName("ID_ESTADO");
+
+                entity.Property(e => e.IdProveedor).HasColumnName("ID_PROVEEDOR");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+            });
+
             modelBuilder.Entity<BdEtiquetaInformacionUnidadCliente>(entity =>
             {
                 entity.HasKey(e => e.IdEtiquetaInformacionUnidadCliente);
@@ -10912,6 +11649,8 @@ namespace WebApiMovil.Models
                     .HasColumnName("ID_CAUSA_CANCELACION")
                     .IsUnicode(false);
 
+                entity.Property(e => e.IdCorreo).HasColumnName("ID_CORREO");
+
                 entity.Property(e => e.Idamx)
                     .HasColumnName("IDAMX")
                     .IsUnicode(false);
@@ -10935,6 +11674,20 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.InstalacionesElavonNoSerie)
                     .HasColumnName("INSTALACIONES_ELAVON_NO_SERIE")
                     .IsUnicode(false);
+
+                entity.Property(e => e.IsApp)
+                    .HasColumnName("IS_APP")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.IsComercioNotifado)
+                    .HasColumnName("IS_COMERCIO_NOTIFADO")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.IsPromociones)
+                    .HasColumnName("IS_PROMOCIONES")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.IsSmc).HasColumnName("IS_SMC");
 
                 entity.Property(e => e.MarcaMantto)
                     .HasColumnName("MARCA_MANTTO")
@@ -11016,6 +11769,14 @@ namespace WebApiMovil.Models
 
                 entity.Property(e => e.TelefonoCampo)
                     .HasColumnName("TELEFONO_CAMPO")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.TelefonoComercio1)
+                    .HasColumnName("TELEFONO_COMERCIO_1")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.TelefonoComercio2)
+                    .HasColumnName("TELEFONO_COMERCIO_2")
                     .IsUnicode(false);
 
                 entity.Property(e => e.Ticket)
@@ -12865,6 +13626,32 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.IdResponsable).HasColumnName("ID_RESPONSABLE");
             });
 
+            modelBuilder.Entity<BdMailRechazoErrores>(entity =>
+            {
+                entity.HasKey(e => e.IdMailRechazoErrores)
+                    .HasName("PK__BD_MAIL___77EC75493D9CCE24");
+
+                entity.ToTable("BD_MAIL_RECHAZO_ERRORES");
+
+                entity.Property(e => e.IdMailRechazoErrores).HasColumnName("ID_MAIL_RECHAZO_ERRORES");
+
+                entity.Property(e => e.FechaAlta)
+                    .HasColumnName("FECHA_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdCarga).HasColumnName("ID_CARGA");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+
+                entity.Property(e => e.Odt)
+                    .HasColumnName("ODT")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<BdMcSims>(entity =>
             {
                 entity.HasKey(e => e.IdSim);
@@ -13490,7 +14277,7 @@ namespace WebApiMovil.Models
                     .WithMany(p => p.BdNegocioHorasMes)
                     .HasForeignKey(d => d.IdCliente)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_BD_UNIDAD_HORAS_MES_C_CLIENTES1");
+                    .HasConstraintName("FK_BD_UNIDAD_HORAS_MES_C_CLIENTES");
 
                 entity.HasOne(d => d.IdNegocioNavigation)
                     .WithMany(p => p.BdNegocioHorasMes)
@@ -14000,6 +14787,24 @@ namespace WebApiMovil.Models
                     .IsUnicode(false);
             });
 
+            modelBuilder.Entity<BdOdtsApiWebservice>(entity =>
+            {
+                entity.HasKey(e => e.IdOdtApiWebservice)
+                    .HasName("PK__BD_ODTS___67F79C32C61300BF");
+
+                entity.ToTable("BD_ODTS_API_WEBSERVICE");
+
+                entity.Property(e => e.IdOdtApiWebservice).HasColumnName("ID_ODT_API_WEBSERVICE");
+
+                entity.Property(e => e.Descripcion)
+                    .HasColumnName("DESCRIPCION")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+            });
+
             modelBuilder.Entity<BdOnbaseInbox>(entity =>
             {
                 entity.HasKey(e => e.IdOnbaseInbox)
@@ -14407,6 +15212,20 @@ namespace WebApiMovil.Models
                     .HasColumnName("TIPOAB")
                     .HasMaxLength(5)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<BdOpcionesReingenieriaTipoUsuario>(entity =>
+            {
+                entity.HasKey(e => e.IdOpcionesReingenieriaTipoUsuario)
+                    .HasName("PK__BD_OPCIO__E3409B23F9419954");
+
+                entity.ToTable("BD_OPCIONES_REINGENIERIA_TIPO_USUARIO");
+
+                entity.Property(e => e.IdOpcionesReingenieriaTipoUsuario).HasColumnName("ID_OPCIONES_REINGENIERIA_TIPO_USUARIO");
+
+                entity.Property(e => e.IdOpcionesReingenieria).HasColumnName("ID_OPCIONES_REINGENIERIA");
+
+                entity.Property(e => e.IdTipoUsuario).HasColumnName("ID_TIPO_USUARIO");
             });
 
             modelBuilder.Entity<BdOrdenCompra>(entity =>
@@ -14954,6 +15773,41 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.Year).HasColumnName("YEAR");
             });
 
+            modelBuilder.Entity<BdProactivas>(entity =>
+            {
+                entity.HasKey(e => e.IdProactiva);
+
+                entity.ToTable("BD_PROACTIVAS");
+
+                entity.Property(e => e.IdProactiva).HasColumnName("ID_PROACTIVA");
+
+                entity.Property(e => e.Estatus)
+                    .HasColumnName("ESTATUS")
+                    .HasMaxLength(15);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+
+                entity.Property(e => e.LiberaDia).HasColumnName("LIBERA_DIA");
+
+                entity.Property(e => e.LiberaMes).HasColumnName("LIBERA_MES");
+
+                entity.Property(e => e.LiberaYear).HasColumnName("LIBERA_YEAR");
+
+                entity.Property(e => e.Month).HasColumnName("MONTH");
+
+                entity.Property(e => e.NoAfiliacion)
+                    .HasColumnName("NO_AFILIACION")
+                    .HasMaxLength(20);
+
+                entity.Property(e => e.Week).HasColumnName("WEEK");
+
+                entity.Property(e => e.Year).HasColumnName("YEAR");
+            });
+
             modelBuilder.Entity<BdProductoStatusAr>(entity =>
             {
                 entity.HasKey(e => e.IdProductoStatusAr);
@@ -15000,6 +15854,48 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.DescError)
                     .HasColumnName("DESC_ERROR")
                     .HasMaxLength(250)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<BdReCalculoDeFechasEstatus>(entity =>
+            {
+                entity.HasKey(e => e.IdReCalculoDeFechasEstatus)
+                    .HasName("PK__BD_RE_CA__079889B508302B1A");
+
+                entity.ToTable("BD_RE_CALCULO_DE_FECHAS_ESTATUS");
+
+                entity.Property(e => e.IdReCalculoDeFechasEstatus).HasColumnName("ID_RE_CALCULO_DE_FECHAS_ESTATUS");
+
+                entity.Property(e => e.DescError)
+                    .HasColumnName("DESC_ERROR")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FecAtencion)
+                    .HasColumnName("FEC_ATENCION")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.FecGarantia)
+                    .HasColumnName("FEC_GARANTIA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdCarga).HasColumnName("ID_CARGA");
+
+                entity.Property(e => e.IdProveedor).HasColumnName("ID_PROVEEDOR");
+
+                entity.Property(e => e.IdStatusAr).HasColumnName("ID_STATUS_AR");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+
+                entity.Property(e => e.Odt)
+                    .HasColumnName("ODT")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
                     .IsUnicode(false);
             });
 
@@ -16275,11 +17171,8 @@ namespace WebApiMovil.Models
                 entity.HasIndex(e => new { e.IdSolicitudRecoleccion, e.IdStatusSolicitudRecoleccion })
                     .HasName("IX_MI_BD_SOLICITUD_RECOLECCION_4785_4784");
 
-                entity.HasIndex(e => new { e.IdCliente, e.IdAlmacenDestino, e.IdServicioMensajeria, e.IdSolicitudRecoleccion, e.IdStatusSolicitudRecoleccion })
-                    .HasName("IX_MI_BD_SOLICITUD_RECOLECCION_4787_4786");
-
                 entity.HasIndex(e => new { e.IdSolicitudRecoleccion, e.IdCliente, e.IdAlmacenDestino, e.IdServicioMensajeria, e.IdStatusSolicitudRecoleccion })
-                    .HasName("IX_MI_BD_SOLICITUD_RECOLECCION_4599_4598");
+                    .HasName("IX_MI_BD_SOLICITUD_RECOLECCION_4787_4786");
 
                 entity.Property(e => e.IdSolicitudRecoleccion).HasColumnName("ID_SOLICITUD_RECOLECCION");
 
@@ -16433,7 +17326,7 @@ namespace WebApiMovil.Models
                 entity.HasIndex(e => new { e.IdStatusSolicitudAlmacen, e.IdEnvio })
                     .HasName("IX_BD_SOLICITUDES_ALMACEN_ID_STATUS_SOLICITUD_ALMACEN, ID_ENVIO");
 
-                entity.HasIndex(e => new { e.IdTipoSolicitudAlmacen, e.IdUrgenciaSolicitudAlmacen, e.IdAr, e.IdUsuarioAlta, e.IdSolicitudAlmacen, e.IdStatusSolicitudAlmacen })
+                entity.HasIndex(e => new { e.IdSolicitudAlmacen, e.IdTipoSolicitudAlmacen, e.IdUrgenciaSolicitudAlmacen, e.IdAr, e.IdUsuarioAlta, e.IdStatusSolicitudAlmacen })
                     .HasName("IX_MI_BD_SOLICITUDES_ALMACEN_21326_21325");
 
                 entity.HasIndex(e => new { e.IdSolicitudAlmacen, e.IdAlmacen, e.IdTipoSolicitudAlmacen, e.IdUrgenciaSolicitudAlmacen, e.IdAr, e.IdUsuarioAlta, e.IdStatusSolicitudAlmacen })
@@ -16441,6 +17334,9 @@ namespace WebApiMovil.Models
 
                 entity.HasIndex(e => new { e.IdSolicitudAlmacen, e.IdTipoSolicitudAlmacen, e.IdUrgenciaSolicitudAlmacen, e.IdAr, e.IdUsuarioAlta, e.FecAlta, e.IdStatusSolicitudAlmacen })
                     .HasName("IX_MI_BD_SOLICITUDES_ALMACEN_22_21");
+
+                entity.HasIndex(e => new { e.IdUrgenciaSolicitudAlmacen, e.IdAr, e.IdUsuarioAlta, e.IdSolicitudAlmacen, e.IdAlmacen, e.IdTipoSolicitudAlmacen, e.IdStatusSolicitudAlmacen })
+                    .HasName("IX_MI_BD_SOLICITUDES_ALMACEN_12_11");
 
                 entity.HasIndex(e => new { e.IdSolicitudAlmacen, e.IdTipoSolicitudAlmacen, e.IdUrgenciaSolicitudAlmacen, e.IdAr, e.FecCompromiso, e.IdUsuarioAlta, e.FecAlta, e.IdStatusSolicitudAlmacen })
                     .HasName("IX_BD_SOLICITUDES_ALMACEN_ID_STATUS_SOLICITUD_ALMACEN");
@@ -16525,7 +17421,7 @@ namespace WebApiMovil.Models
                     .WithMany(p => p.BdSolicitudesAlmacen)
                     .HasForeignKey(d => d.IdTipoServicio)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_BD_SOLICITUDES_ALMACEN_C_TIPO_SERVICIO_SOLICITUD_ALMACEN2");
+                    .HasConstraintName("FK_BD_SOLICITUDES_ALMACEN_C_TIPO_SERVICIO_SOLICITUD_ALMACEN");
 
                 entity.HasOne(d => d.IdTipoSolicitudAlmacenNavigation)
                     .WithMany(p => p.BdSolicitudesAlmacen)
@@ -16894,14 +17790,11 @@ namespace WebApiMovil.Models
                 entity.HasIndex(e => new { e.IdSolicitudViaticos, e.IdAr, e.IdUsuarioSolicitado, e.IdUsuarioAlta, e.IdStatusSolicitudViaticos })
                     .HasName("IX_MI_BD_SOLICITUDES_VIATICOS_8692_8691");
 
-                entity.HasIndex(e => new { e.IdUsuarioAlta, e.IdSolicitudViaticos, e.IdAr, e.Destino, e.IdUsuarioSolicitado, e.IdStatusSolicitudViaticos })
+                entity.HasIndex(e => new { e.IdSolicitudViaticos, e.IdAr, e.Destino, e.IdUsuarioSolicitado, e.IdUsuarioAlta, e.IdStatusSolicitudViaticos })
                     .HasName("IX_BD_SOLICITUDES_VIATICOS_ID_STATUS_SOLICITUD_VIATICOS");
 
-                entity.HasIndex(e => new { e.IdAr, e.Destino, e.IdUsuarioSolicitado, e.IdUsuarioAlta, e.IdSolicitudViaticos, e.IdStatusSolicitudViaticos, e.FecAlta })
-                    .HasName("IX_MI_BD_SOLICITUDES_VIATICOS_27346_27345");
-
                 entity.HasIndex(e => new { e.IdSolicitudViaticos, e.IdAr, e.Destino, e.IdUsuarioSolicitado, e.IdUsuarioAlta, e.IdStatusSolicitudViaticos, e.FecAlta })
-                    .HasName("IX_BD_SOLICITUDES_VIATICOS_ID_STATUS_SOLICITUD_VIATICOS, FEC_ALTA");
+                    .HasName("IX_MI_BD_SOLICITUDES_VIATICOS_27346_27345");
 
                 entity.Property(e => e.IdSolicitudViaticos).HasColumnName("ID_SOLICITUD_VIATICOS");
 
@@ -17228,6 +18121,38 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.IdTipoPlazaCliente).HasColumnName("ID_TIPO_PLAZA_CLIENTE");
             });
 
+            modelBuilder.Entity<BdTempCambioSlaOdt>(entity =>
+            {
+                entity.HasKey(e => e.IdTempCambioSlaOdt)
+                    .HasName("PK__BD_TEMP___6728AE799263805A");
+
+                entity.ToTable("BD_TEMP_CAMBIO_SLA_ODT");
+
+                entity.Property(e => e.IdTempCambioSlaOdt).HasColumnName("ID_TEMP_CAMBIO_SLA_ODT");
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdAr).HasColumnName("ID_AR");
+
+                entity.Property(e => e.IdCarga).HasColumnName("ID_CARGA");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+
+                entity.Property(e => e.Observacion)
+                    .HasColumnName("OBSERVACION")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Odt)
+                    .HasColumnName("ODT")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<BdTempCorreccion>(entity =>
             {
                 entity.HasKey(e => e.IdTempCorreccion);
@@ -17407,6 +18332,32 @@ namespace WebApiMovil.Models
                     .HasForeignKey(d => d.IdTipoServicio)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_BD_TIPO_SERVICIO_PRODUCTO_C_TIPO_SERVICIO");
+            });
+
+            modelBuilder.Entity<BdTipoUsuariosMenus>(entity =>
+            {
+                entity.HasKey(e => e.IdTipoUsuariosMenus)
+                    .HasName("PK__BD_TIPO___4C54092946482648");
+
+                entity.ToTable("BD_TIPO_USUARIOS_MENUS");
+
+                entity.Property(e => e.IdTipoUsuariosMenus).HasColumnName("ID_TIPO_USUARIOS_MENUS");
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdMenu0).HasColumnName("ID_MENU0");
+
+                entity.Property(e => e.IdMenu1).HasColumnName("ID_MENU1");
+
+                entity.Property(e => e.IdTipoUsuario).HasColumnName("ID_TIPO_USUARIO");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<BdTpvsAlta>(entity =>
@@ -17843,14 +18794,17 @@ namespace WebApiMovil.Models
                 entity.HasIndex(e => new { e.IdCliente, e.IdProducto, e.IdResponsable, e.IsDaniada, e.IdStatusUnidad, e.IdUnidad, e.IdTipoResponsable, e.Status })
                     .HasName("IX_MI_BD_UNIDADES_413_412");
 
-                entity.HasIndex(e => new { e.IdStatusUnidad, e.IdUnidad, e.IdCliente, e.IdProducto, e.IdTipoResponsable, e.IdResponsable, e.IsDaniada, e.Status })
+                entity.HasIndex(e => new { e.IdUnidad, e.IdCliente, e.IdProducto, e.IdTipoResponsable, e.IdResponsable, e.IsDaniada, e.IdStatusUnidad, e.Status })
                     .HasName("IX_MI_BD_UNIDADES_415_414");
 
-                entity.HasIndex(e => new { e.NoImei, e.IsDaniada, e.IdStatusUnidad, e.IdCliente, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.IdUnidad, e.IsRetiro, e.Status })
+                entity.HasIndex(e => new { e.IdCliente, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.NoImei, e.IsDaniada, e.IdStatusUnidad, e.IdUnidad, e.IsRetiro, e.Status })
                     .HasName("IX_MI_BD_UNIDADES_64248_64247");
 
-                entity.HasIndex(e => new { e.NoImei, e.IsDaniada, e.IdStatusUnidad, e.IdUnidad, e.IdCliente, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.IdProducto, e.IsRetiro, e.Status })
+                entity.HasIndex(e => new { e.IdUnidad, e.IdCliente, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.NoImei, e.IsDaniada, e.IdStatusUnidad, e.IdProducto, e.IsRetiro, e.Status })
                     .HasName("IX_MI_BD_UNIDADES_64246_64245");
+
+                entity.HasIndex(e => new { e.IdUnidad, e.IdCliente, e.NoSim, e.IdResponsable, e.PosicionInventario, e.IsDaniada, e.IdStatusUnidad, e.FecAlta, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.NoImei, e.Status })
+                    .HasName("IX_BD_UNIDADES_STATUS");
 
                 entity.HasIndex(e => new { e.IdUnidad, e.IdProducto, e.NoSerie, e.NoInventario, e.NoImei, e.PosicionInventario, e.FecAlta, e.IdCliente, e.IdMarca, e.IdModelo, e.IdTipoResponsable, e.IsDaniada, e.Status, e.IdResponsable, e.IdStatusUnidad })
                     .HasName("IX_MI_BD_UNIDADES_82332_82331");
@@ -17858,25 +18812,22 @@ namespace WebApiMovil.Models
                 entity.HasIndex(e => new { e.NoSerie, e.NoInventario, e.NoImei, e.PosicionInventario, e.FecAlta, e.IdUnidad, e.IdProducto, e.IdModelo, e.IdCliente, e.IdMarca, e.IdTipoResponsable, e.IsDaniada, e.Status, e.IdResponsable, e.IdStatusUnidad })
                     .HasName("IX_MI_BD_UNIDADES_187660_187659");
 
-                entity.HasIndex(e => new { e.NoSim, e.IdResponsable, e.PosicionInventario, e.IsDaniada, e.IdStatusUnidad, e.FecAlta, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.NoImei, e.IdUnidad, e.IdCliente, e.Status })
-                    .HasName("IX_BD_UNIDADES_STATUS");
-
-                entity.HasIndex(e => new { e.IdUnidad, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.NoImei, e.PosicionInventario, e.IsDaniada, e.FecAlta, e.IdCliente, e.IdTipoResponsable, e.IdResponsable, e.IsRetiro, e.IdStatusUnidad, e.Status })
-                    .HasName("IX_MI_BD_UNIDADES_4171_4170");
-
-                entity.HasIndex(e => new { e.PosicionInventario, e.IsDaniada, e.IdStatusUnidad, e.FecAlta, e.IdUnidad, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.IdSim, e.NoImei, e.NoSim, e.IdResponsable, e.IdCliente, e.Status })
+                entity.HasIndex(e => new { e.IdUnidad, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.IdSim, e.NoImei, e.NoSim, e.IdResponsable, e.PosicionInventario, e.IsDaniada, e.IdStatusUnidad, e.FecAlta, e.IdCliente, e.Status })
                     .HasName("IX_BD_UNIDADES_ID_CLIENTE, STATUS");
 
-                entity.HasIndex(e => new { e.FecAlta, e.IdNivelDiagnostico, e.NoImei, e.NoSim, e.IdResponsable, e.PosicionInventario, e.IsDaniada, e.IdStatusUnidad, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.IdSim, e.IdUnidad, e.IdCliente, e.Status })
+                entity.HasIndex(e => new { e.NoInventario, e.NoImei, e.PosicionInventario, e.IsDaniada, e.FecAlta, e.IdUnidad, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.IdCliente, e.IdTipoResponsable, e.IdResponsable, e.IsRetiro, e.IdStatusUnidad, e.Status })
+                    .HasName("IX_MI_BD_UNIDADES_4171_4170");
+
+                entity.HasIndex(e => new { e.IdUnidad, e.FecAlta, e.IdNivelDiagnostico, e.NoImei, e.NoSim, e.IdResponsable, e.PosicionInventario, e.IsDaniada, e.IdStatusUnidad, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.IdSim, e.IdCliente, e.Status })
                     .HasName("IX_MI_BD_UNIDADES_81_80");
 
-                entity.HasIndex(e => new { e.IdUnidad, e.NoImei, e.NoSim, e.IdResponsable, e.PosicionInventario, e.IdStatusUnidad, e.IdProducto, e.IsNueva, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.IdCliente, e.Status, e.IdAplicativo, e.IdConectividad, e.IdTipoResponsable })
-                    .HasName("missing_index_3944_3943");
-
-                entity.HasIndex(e => new { e.NoInventario, e.IdSim, e.NoImei, e.NoSim, e.IdResponsable, e.PosicionInventario, e.IdUnidad, e.IdCliente, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.IsDaniada, e.IdStatusUnidad, e.FecAlta, e.IdNivelDiagnostico, e.Status })
+                entity.HasIndex(e => new { e.IsDaniada, e.IdStatusUnidad, e.FecAlta, e.IdNivelDiagnostico, e.NoInventario, e.IdSim, e.NoImei, e.NoSim, e.IdResponsable, e.PosicionInventario, e.IdUnidad, e.IdCliente, e.IdProducto, e.IdMarca, e.IdModelo, e.NoSerie, e.Status })
                     .HasName("IX_MI_BD_UNIDADES_83_82");
 
-                entity.HasIndex(e => new { e.PosicionInventario, e.IsRetiro, e.IsDaniada, e.FecAlta, e.IdAplicativo, e.IdConectividad, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.NoImei, e.IdResponsable, e.IdUnidad, e.IdCliente, e.IsNueva, e.IdTipoResponsable, e.IdStatusUnidad, e.Status })
+                entity.HasIndex(e => new { e.NoImei, e.NoSim, e.IdResponsable, e.PosicionInventario, e.IdStatusUnidad, e.IdProducto, e.IsNueva, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.IdUnidad, e.IdCliente, e.Status, e.IdAplicativo, e.IdConectividad, e.IdTipoResponsable })
+                    .HasName("missing_index_3944_3943");
+
+                entity.HasIndex(e => new { e.IdUnidad, e.IdCliente, e.IsNueva, e.PosicionInventario, e.IsRetiro, e.IsDaniada, e.FecAlta, e.IdAplicativo, e.IdConectividad, e.IdMarca, e.IdModelo, e.NoSerie, e.NoInventario, e.NoImei, e.IdResponsable, e.IdTipoResponsable, e.IdStatusUnidad, e.Status })
                     .HasName("missing_index_2282_2281");
 
                 entity.Property(e => e.IdUnidad).HasColumnName("ID_UNIDAD");
@@ -18343,6 +19294,10 @@ namespace WebApiMovil.Models
                     .HasColumnName("FECHA_CARGA")
                     .HasColumnType("datetime");
 
+                entity.Property(e => e.IdProceso)
+                    .HasColumnName("ID_PROCESO")
+                    .HasMaxLength(50);
+
                 entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
 
                 entity.Property(e => e.Linea)
@@ -18359,6 +19314,10 @@ namespace WebApiMovil.Models
 
                 entity.Property(e => e.Sim)
                     .HasColumnName("SIM")
+                    .HasMaxLength(35);
+
+                entity.Property(e => e.StatusCarga)
+                    .HasColumnName("STATUS_CARGA")
                     .HasMaxLength(20);
             });
 
@@ -18385,6 +19344,10 @@ namespace WebApiMovil.Models
                     .HasColumnName("FEC_ALTA")
                     .HasColumnType("datetime");
 
+                entity.Property(e => e.IdProceso)
+                    .HasColumnName("ID_PROCESO")
+                    .HasMaxLength(50);
+
                 entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
 
                 entity.Property(e => e.MajorCategory)
@@ -18399,9 +19362,17 @@ namespace WebApiMovil.Models
                     .HasColumnName("NO_SERIE")
                     .HasMaxLength(30);
 
+                entity.Property(e => e.Observaciones)
+                    .HasColumnName("OBSERVACIONES")
+                    .HasColumnType("text");
+
                 entity.Property(e => e.Status)
                     .HasColumnName("STATUS")
                     .HasMaxLength(10);
+
+                entity.Property(e => e.StatusCarga)
+                    .HasColumnName("STATUS_CARGA")
+                    .HasMaxLength(20);
             });
 
             modelBuilder.Entity<BdUpdateIsContractNegocios>(entity =>
@@ -18545,6 +19516,11 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
 
                 entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+
+                entity.Property(e => e.Imei)
+                    .HasColumnName("IMEI")
+                    .HasMaxLength(20)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Status)
                     .HasColumnName("STATUS")
@@ -18695,6 +19671,64 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
 
                 entity.Property(e => e.IdZona).HasColumnName("ID_ZONA");
+            });
+
+            modelBuilder.Entity<BdUsuariosEnviarEmail>(entity =>
+            {
+                entity.HasKey(e => e.IdUsuarioEnviarEmail)
+                    .HasName("PK__BD_USUAR__637D42F60028AAA8");
+
+                entity.ToTable("BD_USUARIOS_ENVIAR_EMAIL");
+
+                entity.Property(e => e.IdUsuarioEnviarEmail).HasColumnName("ID_USUARIO_ENVIAR_EMAIL");
+
+                entity.Property(e => e.IdSendUsuarioAlta).HasColumnName("ID_SEND_USUARIO_ALTA");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+            });
+
+            modelBuilder.Entity<BdUsuariosEnviarEmail2>(entity =>
+            {
+                entity.HasKey(e => e.IdUsuariosEnviarEmail)
+                    .HasName("PK__BD_USUAR__7BF3D520DD223794");
+
+                entity.ToTable("BD_USUARIOS_ENVIAR_EMAIL_2");
+
+                entity.Property(e => e.IdUsuariosEnviarEmail).HasColumnName("ID_USUARIOS_ENVIAR_EMAIL");
+
+                entity.Property(e => e.CheckValor).HasColumnName("CHECK_VALOR");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+
+                entity.Property(e => e.Notificacion)
+                    .HasColumnName("NOTIFICACION")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<BdUsuariosEnviorEmail2>(entity =>
+            {
+                entity.HasKey(e => e.IdUsuariosEnviorEmail2)
+                    .HasName("PK__BD_USUAR__3C909B57884924E4");
+
+                entity.ToTable("BD_USUARIOS_ENVIOR_EMAIL_2");
+
+                entity.Property(e => e.IdUsuariosEnviorEmail2).HasColumnName("ID_USUARIOS_ENVIOR_EMAIL_2");
+
+                entity.Property(e => e.Checked)
+                    .HasColumnName("CHECKED")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.IdNotificacionesEmail).HasColumnName("ID_NOTIFICACIONES_EMAIL");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<BdVacaciones>(entity =>
@@ -18890,7 +19924,7 @@ namespace WebApiMovil.Models
 
                 entity.HasIndex(e => e.TaskId);
 
-                entity.HasIndex(e => new { e.BbvaCrtDireccion, e.BbvaTsitio, e.BbvaCiAutoserv, e.Importado, e.Automatico, e.BbvaCtrAutoservicio, e.Summary, e.TaskType, e.TaskName, e.Priority, e.Urgency, e.BbvaCrtClaseAtm, e.IdTareaBancomer, e.TaskId, e.CreateDate, e.Status })
+                entity.HasIndex(e => new { e.IdTareaBancomer, e.TaskId, e.CreateDate, e.BbvaCrtDireccion, e.BbvaTsitio, e.BbvaCiAutoserv, e.Importado, e.Automatico, e.BbvaCtrAutoservicio, e.Summary, e.TaskType, e.TaskName, e.Priority, e.Urgency, e.BbvaCrtClaseAtm, e.Status })
                     .HasName("IX_BD_WS_BANCOMER_Status");
 
                 entity.Property(e => e.IdTareaBancomer).HasColumnName("id_tarea_bancomer");
@@ -19295,6 +20329,37 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.IdStatusJunta).HasColumnName("ID_STATUS_JUNTA");
 
                 entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<CCanales>(entity =>
+            {
+                entity.HasKey(e => e.IdCanal)
+                    .HasName("PK__C_CANALE__6C4D2FE6A407CD4F");
+
+                entity.ToTable("C_CANALES");
+
+                entity.Property(e => e.IdCanal).HasColumnName("ID_CANAL");
+
+                entity.Property(e => e.DescCanal)
+                    .HasColumnName("DESC_CANAL")
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Descripcion)
+                    .HasColumnName("DESCRIPCION")
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdUsuario).HasColumnName("ID_USUARIO");
 
                 entity.Property(e => e.Status)
                     .HasColumnName("STATUS")
@@ -21548,6 +22613,34 @@ namespace WebApiMovil.Models
                     .IsUnicode(false);
             });
 
+            modelBuilder.Entity<CNotificacionesEmail>(entity =>
+            {
+                entity.HasKey(e => e.IdNotificacionesEmail)
+                    .HasName("PK__C_NOTIFI__049DF4E0C560B310");
+
+                entity.ToTable("C_NOTIFICACIONES_EMAIL");
+
+                entity.Property(e => e.IdNotificacionesEmail).HasColumnName("ID_NOTIFICACIONES_EMAIL");
+
+                entity.Property(e => e.DescNotificacion)
+                    .HasColumnName("DESC_NOTIFICACION")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Valor)
+                    .HasColumnName("VALOR")
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<COperadores>(entity =>
             {
                 entity.HasKey(e => e.IdOperador);
@@ -21822,6 +22915,12 @@ namespace WebApiMovil.Models
                     .IsUnique();
 
                 entity.Property(e => e.IdProyectoEspecial).HasColumnName("ID_PROYECTO_ESPECIAL");
+
+                entity.Property(e => e.AplicaBloqueCierre)
+                    .HasColumnName("APLICA_BLOQUE_CIERRE")
+                    .HasMaxLength(100);
+
+                entity.Property(e => e.AplicaCierres).HasColumnName("APLICA_CIERRES");
 
                 entity.Property(e => e.CallCenter).HasColumnName("CALL_CENTER");
 
@@ -22131,6 +23230,41 @@ namespace WebApiMovil.Models
                     .HasColumnName("STATUS")
                     .HasMaxLength(10)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<CSegmentosElavon>(entity =>
+            {
+                entity.HasKey(e => e.IdSegmentoElavon);
+
+                entity.ToTable("C_SEGMENTOS_ELAVON");
+
+                entity.HasIndex(e => e.DescSegmentoElavon)
+                    .HasName("IX_C_SEGMENTOS_ELAVON")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.IdUsuarioAlta)
+                    .HasName("IX_C_SEGMENTOS_ELAVON_2");
+
+                entity.HasIndex(e => e.Status)
+                    .HasName("IX_C_SEGMENTOS_ELAVON_1");
+
+                entity.Property(e => e.IdSegmentoElavon).HasColumnName("ID_SEGMENTO_ELAVON");
+
+                entity.Property(e => e.DescSegmentoElavon)
+                    .IsRequired()
+                    .HasColumnName("DESC_SEGMENTO_ELAVON")
+                    .HasMaxLength(70);
+
+                entity.Property(e => e.FecAlta)
+                    .HasColumnName("FEC_ALTA")
+                    .HasColumnType("smalldatetime");
+
+                entity.Property(e => e.IdUsuarioAlta).HasColumnName("ID_USUARIO_ALTA");
+
+                entity.Property(e => e.Status)
+                    .IsRequired()
+                    .HasColumnName("STATUS")
+                    .HasMaxLength(12);
             });
 
             modelBuilder.Entity<CServicioMensajeria>(entity =>
@@ -23288,6 +24422,32 @@ namespace WebApiMovil.Models
                     .HasConstraintName("FK__C_SUB_ALM__ID_PA__29B0ECBB");
             });
 
+            modelBuilder.Entity<CSubrechazo>(entity =>
+            {
+                entity.HasKey(e => e.IdSubrechazo)
+                    .HasName("ID_SUBRECHAZOPK");
+
+                entity.ToTable("C_SUBRECHAZO");
+
+                entity.Property(e => e.IdSubrechazo).HasColumnName("ID_SUBRECHAZO");
+
+                entity.Property(e => e.FechaAlta)
+                    .HasColumnName("FECHA_ALTA")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Status)
+                    .HasColumnName("STATUS")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Subrechazo)
+                    .HasColumnName("SUBRECHAZO")
+                    .IsUnicode(false);
+
+                entity.Property(e => e.UsuarioAlta).HasColumnName("USUARIO_ALTA");
+            });
+
             modelBuilder.Entity<CTecnicos>(entity =>
             {
                 entity.HasKey(e => e.IdTecnico);
@@ -24205,15 +25365,21 @@ namespace WebApiMovil.Models
                     .HasName("IX_MI_C_USUARIOS_8782_8781");
 
                 entity.HasIndex(e => new { e.IdUsuario, e.IdTipoUsuario, e.Nombre, e.Paterno, e.Materno, e.Status })
-                    .HasName("IX_MI_C_USUARIOS_5114_5113");
+                    .HasName("IX_MI_C_USUARIOS_149_148");
 
                 entity.HasIndex(e => new { e.IdUsuario, e.Nombre, e.Paterno, e.Materno, e.IdTipoUsuario, e.Status })
                     .HasName("IX_MI_C_USUARIOS_634_633");
 
                 entity.HasIndex(e => new { e.Materno, e.IdUsuario, e.Nombre, e.Paterno, e.IdTipoUsuario, e.Status })
-                    .HasName("IX_C_USUARIOS_ID_TIPO_USUARIO, STATUS");
+                    .HasName("IX_C_USUARIOS_ID_TIPO_USUARIO_STATUS");
 
-                entity.HasIndex(e => new { e.IdTipoUsuario, e.Nombre, e.Paterno, e.Materno, e.FecAccesoPda, e.IdUsuario, e.IsPda })
+                entity.HasIndex(e => new { e.Nombre, e.Paterno, e.Materno, e.IdTipoUsuario, e.Status, e.IdUsuario })
+                    .HasName("IX_MI_C_USUARIOS_48_47");
+
+                entity.HasIndex(e => new { e.Nombre, e.Paterno, e.Materno, e.IdUsuario, e.IdTipoUsuario, e.Status })
+                    .HasName("IX_MI_C_USUARIOS_5114_5113");
+
+                entity.HasIndex(e => new { e.IdUsuario, e.IdTipoUsuario, e.Nombre, e.Paterno, e.Materno, e.FecAccesoPda, e.IsPda })
                     .HasName("IX_MI_C_USUARIOS_12072_12071");
 
                 entity.HasIndex(e => new { e.IdUsuario, e.Nombre, e.Paterno, e.Materno, e.IdTipoUsuario, e.Status, e.IsFollowerDispatch })
@@ -24351,6 +25517,10 @@ namespace WebApiMovil.Models
                 entity.Property(e => e.IsCache).HasColumnName("IS_CACHE");
 
                 entity.Property(e => e.IsCallCenterContacto).HasColumnName("IS_CALL_CENTER_CONTACTO");
+
+                entity.Property(e => e.IsCambioStatusUnidadInstaladas).HasColumnName("IS_CAMBIO_STATUS_UNIDAD_INSTALADAS");
+
+                entity.Property(e => e.IsCambioStatusUnidadReglaDisponibleUsado).HasColumnName("IS_CAMBIO_STATUS_UNIDAD_REGLA_DISPONIBLE_USADO");
 
                 entity.Property(e => e.IsConsultaUnidad).HasColumnName("IS_CONSULTA_UNIDAD");
 
@@ -27213,7 +28383,7 @@ namespace WebApiMovil.Models
                 entity.HasIndex(e => new { e.DCp, e.DEstado, e.DMnpio, e.DCiudad, e.DAsenta })
                     .HasName("IX_SEPOMEX_1");
 
-                entity.HasIndex(e => new { e.Id, e.DAsenta, e.DMnpio, e.DCiudad, e.DCp, e.DEstado })
+                entity.HasIndex(e => new { e.DCp, e.Id, e.DAsenta, e.DMnpio, e.DCiudad, e.DEstado })
                     .HasName("missing_index_1249_1248");
 
                 entity.HasIndex(e => new { e.IdTipoLocalidad, e.Id, e.DAsenta, e.DMnpio, e.DCiudad, e.DCp, e.DEstado })
@@ -27274,9 +28444,6 @@ namespace WebApiMovil.Models
 
                 entity.HasIndex(e => e.DCp)
                     .HasName("IX_SEPOMEX_d_CP");
-
-                entity.HasIndex(e => new { e.DCiudad, e.DCp, e.Id, e.DAsenta, e.DMnpio, e.DEstado })
-                    .HasName("IX_MI_SEPOMEX_6551_6550");
 
                 entity.HasIndex(e => new { e.Id, e.DAsenta, e.DMnpio, e.DCiudad, e.DCp, e.DEstado })
                     .HasName("IX_SEPOMEX_d_estado");

@@ -69,5 +69,7 @@ namespace WebApiMovil.Models
         public string TapaRet { get; set; }
         public string CableAcRet { get; set; }
         public string BaseRet { get; set; }
+        public int? IdCierreMasivo { get; set; }
+        public string Origen { get; set; }
     }
 }

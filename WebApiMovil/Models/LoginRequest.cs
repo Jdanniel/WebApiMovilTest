@@ -8,5 +8,7 @@ namespace WebApiMovil.Models
         public string username { get; set; }
         [Required]
         public string password { get; set; }
+        [Required]
+        public string imei { get; set; }
     }
 }
