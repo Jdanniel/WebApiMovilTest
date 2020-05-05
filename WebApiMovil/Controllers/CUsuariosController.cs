@@ -51,7 +51,6 @@ namespace WebApiMovil.Controllers
 
                 int idusuario = await _context.CUsuarios.Where(x => x.Username == req.username).Select(x => x.IdUsuario).SingleOrDefaultAsync();
                 var usuario = await _context.CUsuarios.Where(x => x.IdUsuario == idusuario).SingleOrDefaultAsync();
-
                 var UsuarioPhone = _context.BdUsuarioCelular.Where(x => x.IdUsuario == idusuario).FirstOrDefault();
 
                 if(UsuarioPhone != null)
@@ -65,7 +64,7 @@ namespace WebApiMovil.Controllers
                         }
                         else
                         {
-                            return NotFound();
+                            return NotFound(new { Texterror = "IMEI"});
                         }
                     }
                 }
@@ -99,7 +98,17 @@ namespace WebApiMovil.Controllers
                     return NotFound();
                 }
 
-
+                BdBitacoraAcceso acceso = new BdBitacoraAcceso()
+                {
+                   IdUsuario = idusuario,
+                   Acceso = DateTime.Now,
+                   FecStatus = DateTime.Now,
+                   Status = "ACTIVO",
+                   IpCliente = req.imei,
+                   Host = "ACCESO APLICACION"
+                };
+                _context.BdBitacoraAcceso.Add(acceso);
+                await _context.SaveChangesAsync();
                 return Ok(new { user = usuario.Nombre +" "+ usuario.Paterno +" "+ usuario.Materno, idusuario = usuario.IdUsuario });
 
             }
