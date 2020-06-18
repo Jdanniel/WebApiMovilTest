@@ -48,69 +48,75 @@ namespace WebApiMovil.Controllers
 
             try
             {
-
-                int idusuario = await _context.CUsuarios.Where(x => x.Username == req.username).Select(x => x.IdUsuario).SingleOrDefaultAsync();
-                var usuario = await _context.CUsuarios.Where(x => x.IdUsuario == idusuario).SingleOrDefaultAsync();
-                var UsuarioPhone = _context.BdUsuarioCelular.Where(x => x.IdUsuario == idusuario).FirstOrDefault();
-
-                if(UsuarioPhone != null)
+                var dataApp = await _context.BdApplicationVersions.Where(x => x.Status).FirstOrDefaultAsync();
+                if(dataApp.BuildNumber == req.buildNumber && dataApp.Version == req.version)
                 {
-                    if (UsuarioPhone.Imei != req.imei)
+                    int idusuario = await _context.CUsuarios.Where(x => x.Username == req.username).Select(x => x.IdUsuario).SingleOrDefaultAsync();
+                    var usuario = await _context.CUsuarios.Where(x => x.IdUsuario == idusuario).SingleOrDefaultAsync();
+                    var UsuarioPhone = _context.BdUsuarioCelular.Where(x => x.IdUsuario == idusuario).FirstOrDefault();
+
+                    if (UsuarioPhone != null)
                     {
-                        if(UsuarioPhone.Imei == null)
+                        if (UsuarioPhone.Imei != req.imei)
                         {
-                            UsuarioPhone.Imei = req.imei;
-                            _context.SaveChanges();
-                        }
-                        else
-                        {
-                            return NotFound(new { Texterror = "IMEI"});
+                            if (UsuarioPhone.Imei == null)
+                            {
+                                UsuarioPhone.Imei = req.imei;
+                                _context.SaveChanges();
+                            }
+                            else
+                            {
+                                return NotFound(new { Texterror = "IMEI" });
+                            }
                         }
                     }
+                    else
+                    {
+                        BdUsuarioCelular celular = new BdUsuarioCelular()
+                        {
+                            IdUsuario = idusuario,
+                            IdUsuarioAlta = 559,
+                            FecAlta = DateTime.Now,
+                            Imei = req.imei
+                        };
+                        _context.BdUsuarioCelular.Add(celular);
+                        _context.SaveChanges();
+                    }
+
+                    if (usuario == null)
+                    {
+                        return NotFound();
+                    }
+
+                    SpGetPassword pw = await _context.Query<SpGetPassword>().FromSql("EXEC SP_GET_PASSWORD @p0", idusuario).SingleOrDefaultAsync();
+
+                    if (usuario.IsPda != 1)
+                    {
+                        return NotFound(new { Texterror = "El usuario no es PDA" });
+                    }
+
+                    if (!req.password.Equals(pw.pw))
+                    {
+                        return NotFound();
+                    }
+
+                    BdBitacoraAcceso acceso = new BdBitacoraAcceso()
+                    {
+                        IdUsuario = idusuario,
+                        Acceso = DateTime.Now,
+                        FecStatus = DateTime.Now,
+                        Status = "ACTIVO",
+                        IpCliente = req.imei,
+                        Host = "ACCESO APLICACION"
+                    };
+                    _context.BdBitacoraAcceso.Add(acceso);
+                    await _context.SaveChangesAsync();
+                    return Ok(new { user = usuario.Nombre + " " + usuario.Paterno + " " + usuario.Materno, idusuario = usuario.IdUsuario });
                 }
                 else
                 {
-                    BdUsuarioCelular celular = new BdUsuarioCelular()
-                    {
-                        IdUsuario = idusuario,
-                        IdUsuarioAlta = 559,
-                        FecAlta = DateTime.Now,
-                        Imei = req.imei
-                    };
-                    _context.BdUsuarioCelular.Add(celular);
-                    _context.SaveChanges();
+                    return BadRequest(new { Texterror = "VERSION"});
                 }
-
-                if (usuario == null)
-                {
-                    return NotFound();
-                }
-
-                SpGetPassword pw = await _context.Query<SpGetPassword>().FromSql("EXEC SP_GET_PASSWORD @p0", idusuario).SingleOrDefaultAsync();
-
-                if (usuario.IsPda != 1)
-                {
-                    return NotFound(new { Texterror = "El usuario no es PDA" });
-                }
-
-                if (!req.password.Equals(pw.pw))
-                {
-                    return NotFound();
-                }
-
-                BdBitacoraAcceso acceso = new BdBitacoraAcceso()
-                {
-                   IdUsuario = idusuario,
-                   Acceso = DateTime.Now,
-                   FecStatus = DateTime.Now,
-                   Status = "ACTIVO",
-                   IpCliente = req.imei,
-                   Host = "ACCESO APLICACION"
-                };
-                _context.BdBitacoraAcceso.Add(acceso);
-                await _context.SaveChangesAsync();
-                return Ok(new { user = usuario.Nombre +" "+ usuario.Paterno +" "+ usuario.Materno, idusuario = usuario.IdUsuario });
-
             }
             catch (Exception ex)
             {

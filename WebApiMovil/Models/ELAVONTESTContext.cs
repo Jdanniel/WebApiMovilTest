@@ -15,6 +15,7 @@ namespace WebApiMovil.Models
         {
         }
 
+        public virtual DbSet<BdApplicationVersions> BdApplicationVersions { get; set; }
         public virtual DbSet<BdActasAdmin> BdActasAdmin { get; set; }
         public virtual DbSet<BdAfiliacionesProyectoEspecial> BdAfiliacionesProyectoEspecial { get; set; }
         public virtual DbSet<BdAjustesInsumosPaso> BdAjustesInsumosPaso { get; set; }
@@ -905,7 +906,7 @@ namespace WebApiMovil.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=192.168.100.56;Persist Security Info=True;connect timeout=400000;Database=ELAVON;User Id=sa;Password=b4ckl45h;");
+                optionsBuilder.UseSqlServer("Server=192.168.100.56;Persist Security Info=True;connect timeout=400000;Database=ELAVON-TEST;User Id=sa;Password=b4ckl45h;");
                 //optionsBuilder.UseSqlServer("Server=192.168.5.68;Persist Security Info=True;connect timeout=400000;Database=ELAVON_PRODUCTIVO;User Id=sa;Password=micr0f0rmas;");
             }
         }
@@ -913,6 +914,33 @@ namespace WebApiMovil.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
+
+            modelBuilder.Entity<BdApplicationVersions>(entity =>
+            {
+                entity.HasKey(e => e.IdApplicationVerion)
+                    .HasName("PK__BD_APPLI__FBF2DC322CAAB87B");
+
+                entity.ToTable("BD_APPLICATION_VERSIONS");
+
+                entity.Property(e => e.IdApplicationVerion).HasColumnName("ID_APPLICATION_VERSION");
+
+                entity.Property(e => e.Version)
+                    .HasColumnName("VERSION")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.BuildNumber)
+                    .HasColumnName("BUILD_NUMBER")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.DischargeDate)
+                    .HasColumnName("DISCHARGE_DATE")
+                    .HasColumnType("smalldatetime");
+
+                entity.Property(e => e.Status).HasColumnName("STATUS");
+
+            });
 
             modelBuilder.Entity<BdActasAdmin>(entity =>
             {
@@ -19520,7 +19548,7 @@ namespace WebApiMovil.Models
 
                 entity.Property(e => e.Imei)
                     .HasColumnName("IMEI")
-                    .HasMaxLength(20)
+                    .HasMaxLength(60)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Status)

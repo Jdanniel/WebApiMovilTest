@@ -10,5 +10,9 @@ namespace WebApiMovil.Models
         public string password { get; set; }
         [Required]
         public string imei { get; set; }
+        [Required]
+        public string version { get; set; }
+        [Required]
+        public string buildNumber { get; set; }
     }
 }
